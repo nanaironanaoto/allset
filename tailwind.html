@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Tailwindテスト</title>
+	<!--CSS-->
+	<link rel="stylesheet" href="./css/custom.css">
+	<link rel="stylesheet" href="./css/destyle.css">
+	<!--flickity-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/0.3.1/flickity.min.css">
+	<!--animateライブラリ-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css" />
+	<!--カスタムTailwindもとデータをローカルで読み込み-->
+	<!-- <link rel="stylesheet" href="./assets/my_tailwind_maximam.css"> -->
+	<!--パージしたカスタムTailwindをローカルで読み込み-->
+	<link rel="stylesheet" href="./assets/my_tailwind.css">
+</head>
+<body>
+	<div class="wrapper">
+
+		<div class="drawer-wrap">
+			<input id="drawer-checkbox" type="checkbox">
+			<label id="drawer-icon" for="drawer-checkbox"><span></span></label>
+			<label id="drawer-close" for="drawer-checkbox"></label>
+			<span class="drawer-label">ドロワー</span>
+			<div id="drawer-content">
+				<p>ここがドロワーとして出てくる部分です。</p>
+				<ul>
+					<li><a href="#tailwindcss">Tailwind</a></li>
+				</ul>
+			</div>
+		</div>
+
+
+
+		<div class="container">
+
+			<!--Tailwind-->
+			<div class="section">
+				<div class="text_effect text-5xl ">
+					<p>この文字がエフェクトとともに現れる
+						<span class="over_color"></span>
+					</p>
+				</div>
+			</div>
+
+			<!-- <div class="section">
+				<blockquote class="tiktok-embed" cite="https://www.tiktok.com/@kamo0816kamo/video/6961789876010372354" data-video-id="6961789876010372354" style="max-width: 605px;min-width: 325px;">
+					<section> <a target="_blank" title="@kamo0816kamo" href="https://www.tiktok.com/@kamo0816kamo">@kamo0816kamo</a>
+						<p><a title="capcut" target="_blank" href="https://www.tiktok.com/tag/capcut">#CapCut</a></p> <a target="_blank" title="♬ 通天閣ララバイ - KATSUHITO SHIRATSUKI" href="https://www.tiktok.com/music/通天閣ララバイ-6902369844272826369">♬ 通天閣ララバイ - KATSUHITO SHIRATSUKI</a>
+					</section>
+				</blockquote>
+				<script async src="https://www.tiktok.com/embed.js"></script>
+			</div> -->
+
+			<div class="section text-20px">
+				<!--チェックボックス-->
+				<input type="checkbox" id="02-A" name="checkbox02" checked="checked">
+				<label for="02-A" class="checkbox02">お見積もり</label>
+				<input type="checkbox" id="02-B" name="checkbox02">
+				<label for="02-B" class="checkbox02">資料請求</label>
+				<input type="checkbox" id="02-C" name="checkbox02">
+				<label for="02-C" class="checkbox02">ご相談</label>
+
+				<!--ラジオボタン-->
+				<input type="radio" id="02-D" name="radio02" checked="checked">
+				<label for="02-D" class="radio02">パソコン</label>
+				<input type="radio" id="02-E" name="radio02">
+				<label for="02-E" class="radio02">スマホ</label>
+			</div>
+
+		</div><!-- .container -->
+
+
+
+
+	</div><!-- .wrapper -->
+	<!--JS-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<!--flickity-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/0.3.1/flickity.pkgd.min.js"></script>
+	<!--inview-->
+	<script src="./js/jquery.inview.min.js"></script>
+	<!--カスタムjs-->
+	<script src="./js/script.js"></script>
+	<!--cookie.js(ポップアップ用)-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+</body>
+</html>

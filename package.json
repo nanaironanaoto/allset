@@ -1,0 +1,10 @@
+{
+  "name": "PROJECT_NAME",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "tailwind build tailwind.config.js -o assets/my_tailwind.css"
+  },
+  "author": "",
+  "license": "UNLICENSED"
+}

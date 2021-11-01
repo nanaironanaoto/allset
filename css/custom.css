@@ -1,0 +1,641 @@
+/*汎用的css部分START*/
+@import url(https://fonts.googleapis.com/earlyaccess/notosansjp.css);
+
+/*html {
+  font-family: 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', 'Noto Serif JP', sans-serif;
+}*/
+
+/*CMSによってここのラッパーをhtmlでないものに変更すること！*/
+html {
+  font-family: 'Noto Serif JP', sans-serif;
+  font-size: 62.5%; /*以降1rem = 10pxとして記述(「rem」 は常にhtml 要素のフォントサイズを基準にする)*/
+  font-weight: 300;
+}
+body{
+  font-size: 1.5rem; /*以降、何も指定していなければフォントの初期サイズは15pxの扱いとなる*/
+  line-height: 1.7;
+}
+
+/*文字の太さはXDでの表記をクラス名にすればOK*/
+.thin,.w2{font-weight: 200;}
+.light,.w3{font-weight: 300;}
+.regular,.w4{font-weight: 400;}
+.medium,.w5{font-weight: 500;}
+.bold,.w7{font-weight: 700;}
+.black,.w8{font-weight: 800;}
+
+.ultralight,.w1{font-weight: 100;}
+.semibold,.w6{font-weight: 600;}
+.ultrabold,.w9{font-weight: 900;}
+
+.notosans{font-family: 'Noto Sans JP', sans-serif;}
+
+.notoserif{font-family: 'Noto Serif JP', sans-serif;}
+
+.roboto{font-family: 'Roboto', sans-serif;}
+
+.lato{font-family: 'Lato', sans-serif;}
+
+.center{text-align: center;}
+.left{text-align: left;}
+.right{text-align: right;}
+
+.wrapper{
+  width: 100%;
+  height: 2000px;
+}
+.container{
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.section{
+  margin-bottom: 50px;
+}
+
+/*ドロワーSTART*/
+.drawer-wrap{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.drawer-label{
+    position: fixed;
+    top: 50px;
+    right: 19px;
+    font-size: 10px;
+    z-index: 100;
+}
+#drawer-content {
+  overflow: auto;
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 30px;
+    z-index: 40;
+    width: 40vw;
+    min-width: 40vw;
+    height: 100%;
+    background: #fff;
+    transition: all 0.3s ease-in-out 0s;
+  transform: translateX(100%);
+}
+#drawer-checkbox:checked ~ #drawer-content {
+  transform: translateX(0);
+  box-shadow: 6px 0 24px rgba(0, 0, 0, 0.16);
+}
+
+#drawer-close {
+  display: none;
+  position: fixed;
+  z-index: 39;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0;
+  transition: all 0.3s ease-in-out 0s;
+}
+#drawer-checkbox:checked ~ #drawer-close {
+  display: block;
+  opacity: 0.3;
+}
+
+#drawer-checkbox {
+  display: none;
+}
+#drawer-icon {
+  cursor: pointer;
+  display: inline-block;
+  height: 50px;
+  position: fixed;
+  width: 50px;
+  right: 17px;
+  top: 14px;
+    z-index: 100;
+}
+
+#drawer-icon span {
+    background: #333;
+    display: block;
+    height: 1px;
+    left: 50%;
+    margin: -8% 0 0 -42%;
+    position: absolute;
+    top: 46%;
+    transition: all 0.3s ease-in-out 0s;
+    width: 84%;
+}
+#drawer-icon span::before,
+#drawer-icon span::after {
+  -webkit-transform: rotate(0);
+    background: #333;
+    content: "";
+    display: block;
+    height: 100%;
+    left: 50%;
+    margin: -8% 0 0 -50%;
+    position: absolute;
+    top: 50%;
+    transform: rotate(0);
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+}
+#drawer-icon span::before {
+  margin-top: -13px;
+}
+#drawer-icon span::after {
+  margin-top: 10px;
+}
+#drawer-checkbox:checked ~ #drawer-icon span {
+  background: rgba(51, 51, 51, 0);
+}
+#drawer-checkbox:checked ~ #drawer-icon span::before,
+#drawer-checkbox:checked ~ #drawer-icon span::after {
+  content: "";
+  display: block;
+  height: 100%;
+  left: 50%;
+  margin: -8% 0 0 -42%;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+}
+#drawer-checkbox:checked ~ #drawer-icon span::before {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+#drawer-checkbox:checked ~ #drawer-icon span::after {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+/*ドロワーEND*/
+
+#main-gallery{
+  position: relative;
+  margin-bottom:30px;
+  background:#eee;
+}
+ #main-gallery .gallery-cell {
+  width: 66%;
+  height: 500px;
+  max-height: 30vw;
+  margin-right: 10px;
+  background: #8C8;
+  counter-increment: gallery-cell;
+}
+.gallery-cell img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    -webkit- transform: translateY(-50%) translateX(-50%);
+    width: 100%;
+}
+
+.scrollfadein_demo01{
+  opacity: 0;
+  transition: 0.5s;
+}
+.scrollfadein_demo01.isShow{
+  opacity: 1;
+}
+.afterload_fadein_demo01{
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.parallax_wrap01{
+  position: relative;
+  height: 280px;
+}
+.parallax_obj01{
+  bottom: -100px; /*初期位置としてscript.jsにも設定すること*/
+  position: absolute;
+}
+
+.parallax_wrap02{
+  position: relative;
+  height: 200px;
+  background: #f9b6f7;
+  overflow: hidden;
+}
+.parallax_obj02{
+  top: -100px; /*初期位置としてscript.jsにも設定すること*/
+  position: absolute;
+}
+
+/*TOP人気エリアのタブ切り替えSTART*/
+.popular_area_tab-area {
+  display: flex;
+  justify-content: space-around;
+  background: #fff;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+.popular_area_tab-area .popular_area_tab:last-child{
+  margin-right: 0;
+}
+.popular_area_tab-area .popular_area_tab {
+  text-align: center;
+  width: 100%;
+  margin-right: 10px;
+  padding: 10px;
+  border:1px solid #ccc;
+}
+.popular_area_tab-area .popular_area_tab h3{
+  font-size:12px;
+}
+.popular_area_tab-area .popular_area_tab.active {
+  background: #3FA6D5;
+  color: #fff;
+}
+.popular_area_content-area {
+  text-align: center;
+}
+.popular_area_content-area .popular_area_content {
+  display: none;
+}
+.popular_area_content-area .popular_area_content.show {
+  text-align: left;
+  display: block;
+}
+.popular_area_content{
+  position: relative;
+}
+.popular_area_content-area .popular_area_content.tab_fadeInRight{
+  animation-name: tab_fadeInRight_keyframes;
+  animation-duration: 0.5s;
+}
+@keyframes tab_fadeInRight_keyframes {
+    0% {
+        opacity:0;
+        right: -100px;
+    }
+    100% {
+        opacity:1.0;
+        right: 0;
+    }
+}
+.popular_area_content>div {
+    display: inline-block;
+    overflow: hidden;
+    width: calc(25% - 8px);
+    vertical-align: top;
+    margin: 0 0 10px;
+    text-align: left;
+    background: #eee;
+    border-bottom: 1px solid #fff;
+}
+/*TOP人気エリアのタブ切り替えEND*/
+
+/*リストフェードイン*/
+.dominoFade>ul>li{
+  width: calc(33.3% - 3px);
+  overflow: hidden;
+  vertical-align: top;
+  display: inline-block;
+  opacity: 0;
+  position: relative;
+  right: -50px;
+  transition: 0.5s;
+}
+.dominoFade>ul>li.fadeInRight{
+  right: 0;
+  opacity: 1.0;
+}
+
+.youtube {
+    width: 100%;
+    position: relative;
+    padding-bottom: calc(100% / 1.777);
+    /* 計算式 16: 9(1.77:1)にしたいので、 540÷960=56.25% */
+}
+.youtube iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.flex_split{
+  width: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.flex_split>div{
+  width: 20%;
+  margin-right: 5%;
+}
+.flex_split>div:nth-child(1){
+  background: red;
+}
+.flex_split>div:nth-child(2){
+  background: yellow;
+}
+.flex_split>div:nth-child(3){
+  background: green;
+}
+.flex_split>div:nth-child(4){
+  background: blue;
+}
+
+/*480以下*/
+@media screen and (max-width: 480px) {
+  .youtube {
+      width: 100%;
+      position: relative;
+      padding-bottom: 56.25%;
+      /* 計算式 16: 9(1.77:1)にしたいので、 540÷960=56.25% */
+  }
+  .youtube iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+  }
+  .flex_split>div{
+    width: 45%;
+    margin-right: 5%;
+  }
+}
+
+/* SVGアニメーション */
+.svg01{
+  display: none;
+}
+.svg01 svg{
+  width: 20%;
+}
+
+/* CSSアコーディオン */
+.acd-check{
+    display: none;
+}
+.acd-label{
+    background: #333;
+    color: #fff;
+    display: block;
+    margin-bottom: 1px;
+    padding: 10px;
+}
+.acd-content{
+    border: 1px solid #333;
+    height: 0;
+    opacity: 0;
+    padding: 0 10px;
+    transition: .5s;
+    visibility: hidden;
+}
+.acd-check:checked + .acd-label + .acd-content{
+  /*.acd-check:checked + .acd-label + .acd-contentと指定することで、
+  チェックボックスにチェックが入った状態のacd-contentという指定ができます。*/
+    height: 40px;
+    opacity: 1;
+    padding: 10px;
+    visibility: visible;
+}
+
+/* ポップアップウィンドウ */
+.r18_overlay{
+    display:none;
+    width:100%;
+    height:100%;
+    background: rgba(0,0,0,0.6);
+    position:fixed;
+    z-index:1001;
+      top: 0;
+    left: 0;
+}
+.r18_btn_area{
+  max-width: 540px;
+  width: 100%;
+  text-align: center;
+  height: 375px;
+  position: relative;
+  top: 25vh;
+  left: calc(50% - 540px/2);
+  background-color: #fff;
+  z-index: 1000000;
+  padding: 64px 53px;
+  outline: 1px solid #000000;
+  outline-offset: -12px /* どれだけ内側に線を表示したいかを負の値で指定 */;
+}
+.r18_btn_area .btns {
+    margin-top: 45px;
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+}
+.r18_btn_area .btns a {
+    width: 50%;
+    text-align: center;
+}
+.r18_btn_area .btns a:first-child {
+    border-right: 1px solid #999;
+}
+.r18_btn_area p {
+    font-size: 14px;
+    margin-top: 5px;
+}
+.title_popup {
+    width: 324px;
+    margin: 0 auto;
+}
+.r18_btn_area a.close_popup {
+    position: absolute;
+    top: 22px;
+    right: 22px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.r18_btn_area .btns img {
+    width: 48px;
+    margin: 0 auto;
+}
+
+/*テキストエフェクト*/
+.text_effect{
+  position: relative;
+}
+.text_effect>p {
+    display: inline-block;
+    position: relative;
+    color: #0000;
+}
+.text_effect>p.animate {
+    animation-name: text_opacity_keyframes;
+    animation-duration: 1.0s;
+    animation-fill-mode: forwards;
+}
+@keyframes text_opacity_keyframes {
+    0% {
+        color: #0000;
+    }
+    40% {
+        color: #0000;
+    }
+    41% {
+        color: #000;
+    }
+    100% {
+        color: #000;
+    }
+}
+.over_color {
+    background: #7575e4;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: left;
+    transform: scaleX(0);
+}
+.over_color.animate{
+  animation-name: text_effect_keyframes;
+  animation-duration: 1.0s;
+}
+@keyframes text_effect_keyframes {
+    0% {
+        transform-origin: left;
+        transform: scaleX(0);
+    }
+    20% {
+        transform-origin: left;
+        transform: scaleX(100%);
+    }
+    40% {
+        transform-origin: right;
+        transform: scaleX(100%);
+    }
+    100% {
+        transform-origin: right;
+        transform: scaleX(0);
+    }
+}
+
+@media screen and (max-width: 480px){
+  #drawer-content{
+    width: 100vw;
+  }
+  .r18_btn_area {
+      left: calc(50% - 80% / 2);
+      width: 80%;
+      padding: 60px 48px;
+      text-align: left;
+  }
+  .title_popup {
+      width: 238px;
+  }
+  .r18_btn_area .btns img {
+      width: 54px;
+  }
+  .btns>a:first-child>div {
+      margin-right: 25px;
+  }
+  btns>a:last-child>div {
+      margin-left: 25px;
+  }
+}
+
+/*checkbox, radioのカスタム*/
+/* チェックボックス */
+input[type=checkbox] {
+    display: none;
+}
+.checkbox02 {
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline-block;
+    padding: 5px 30px;
+    position: relative;
+    width: auto;
+}
+.checkbox02::before {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    content: '';
+    display: block;
+    height: 16px;
+    left: 5px;
+    margin-top: -8px;
+    position: absolute;
+    top: 50%;
+    width: 16px;
+}
+.checkbox02::after {
+    border-right: 6px solid #00cccc;
+    border-bottom: 3px solid #00cccc;
+    content: '';
+    display: block;
+    height: 20px;
+    left: 12px;
+    margin-top: -16px;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    transform: rotate(45deg);
+    width: 9px;
+}
+input[type=checkbox]:checked + .checkbox02::before {
+    border-color: #666;
+}
+input[type=checkbox]:checked + .checkbox02::after {
+    opacity: 1;
+}
+
+/* ラジオボタン */
+input[type=radio] {
+    display: none;
+}
+.radio02 {
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline-block;
+    padding: 5px 30px;
+    position: relative;
+    width: auto;
+}
+.radio02::before {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    content: '';
+    display: block;
+    height: 16px;
+    left: 5px;
+    margin-top: -8px;
+    position: absolute;
+    top: 50%;
+    width: 16px;
+}
+.radio02::after {
+    background: #00cccc;
+    border-radius: 50%;
+    content: '';
+    display: block;
+    height: 8px;
+    left: 9px;
+    margin-top: -4px;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    width: 8px;
+}
+input[type=radio]:checked + .radio02::before {
+    border-color: #666;
+}
+input[type=radio]:checked + .radio02::after {
+    opacity: 1;
+}

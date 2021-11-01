@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>オールセット静的HTML</title>
+	<!--CSS-->
+	<link rel="stylesheet" href="./css/custom.css">
+	<link rel="stylesheet" href="./css/destyle.css">
+	<!--flickity-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/0.3.1/flickity.min.css">
+	<!--animateライブラリ-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css" />
+	<!--TailwindcssをCDNで読み込み-->
+	<!-- <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"> -->
+	<!--Tailwindもとデータをローカルで読み込み-->
+	<link rel="stylesheet" href="./tailwind.css">
+	<!--パージしたTailwindをローカルで読み込み-->
+	<link rel="stylesheet" href="./dist/tailwind.css">
+</head>
+<body>
+	<div class="wrapper">
+
+		<div class="drawer-wrap">
+			<input id="drawer-checkbox" type="checkbox">
+			<label id="drawer-icon" for="drawer-checkbox"><span></span></label>
+			<label id="drawer-close" for="drawer-checkbox"></label>
+			<span class="drawer-label">ドロワー</span>
+			<div id="drawer-content">
+				<p>ここがドロワーとして出てくる部分です。</p>
+				<ul>
+					<li><a href="#afterload_fadein">ページ読み込み完了後に実行されるフェードイン</a></li>
+					<li><a href="#scroll_fadein">スクロールフェードインです</a></li>
+					<li><a href="#inview_and_animateCss">inview＆animateライブラリ(animate.min.css)スクロールアニメーション</a></li>
+					<li><a href="#parallax01">パララックス01</a></li>
+					<li><a href="#parallax02">パララックス02</a></li>
+					<li><a href="#tabChange_and_animateCss">タブ切り替え</a></li>
+					<li><a href="#dominoFadeinList">リスト要素が順番に表示される</a></li>
+					<li><a href="#youtube">YouTube埋め込み</a></li>
+					<li><a href="#order_reverse">順序を逆にする</a></li>
+					<li><a href="#flex_split">フレックスボックスでPC/SPでカラム数を出し分け</a></li>
+					<li><a href="#svg_animation">SVGアニメーション</a></li>
+					<li><a href="#popup">ポップアップウィンドウ</a></li>
+					<li><a href="#tailwindcss">Tailwind</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<!--flickity カルーセルスライダー-->
+		<div id="main-gallery">
+			<div class="gallery-cell">
+		      	<a href="#">
+			      	<img src="./img/sample.jpg" alt="1">
+		  		</a>
+			</div>
+			<div class="gallery-cell">
+		      	<a href="#">
+			      	<img src="./img/sample.jpg" alt="2">
+		  		</a>
+			</div>
+			<div class="gallery-cell">
+		      	<a href="#">
+			      	<img src="./img/sample.jpg" alt="3">
+		  		</a>
+			</div>
+		</div>
+
+		<div class="container">	
+
+			<!--ページ読み込み完了後に実行-->
+			<div class="section" id="afterload_fadein">
+				<h2 class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-l">ページ読み込み完了後に実行されるフェードインです</h2>
+				<div class="afterload_fadein_demo01">
+					<img src="./img/sample.jpg" alt="4">
+					<p>ページ読み込み完了したので実行されました</p>
+				</div>				
+			</div>
+
+			<!--スクロールフェードイン jsで指定しているクラスに囲まれた要素にisShowクラスがついたりきえたりしてアニメーション-->
+			<div class="section" id="scroll_fadein">
+				<h2>スクロールフェードインです</h2>
+				<div class="scrollfadein_demo01">
+					<img src="./img/sample.jpg" alt="4">
+					<p>いきつもどりつするとこいつも出たり消えたり</p>
+				</div>
+			</div>
+
+			<!--inview＆animateライブラリ(animate.min.css)スクロールアニメーション-->
+			<div class="section" id="inview_and_animateCss">
+				<h2>inview＆animateライブラリ(animate.min.css)スクロールアニメーション</h2>
+				<div class="box1 animated">fadeInDown</div>
+				<div class="box2 animated">bounceIn</div>
+				<div class="box3 animated">lightSpeedIn</div>
+			</div>
+
+			<!--パララックス01-->
+			<div class="section" id="parallax01">
+				<h2>パララックス01</h2>
+				<div class="parallax_wrap01">
+					<div class="parallax_obj01">
+						<img src="./img/sample.jpg" alt="">
+						<p>パララックスどえーす</p>
+					</div>
+				</div>
+			</div>
+
+			<!--パララックス02-->
+			<div class="section" id="parallax02">
+				<h2>パララックス02</h2>
+				<div class="parallax_wrap02">
+					<div class="parallax_obj02">
+						<img src="./img/sample.jpg" alt="">
+						<p>あたいもパララックスどえーす</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- タブ切り替え＆ KeyFrameアニメーション -->
+			<div class="section" id="tabChange_and_animateCss">
+				<h2>タブ切り替え</h2>
+				<div class="top_content">
+					<div class="popular_area_tab-area">
+						<div class="popular_area_tab">
+							<h3>
+								tab1
+							</h3>
+						</div>
+						<div class="popular_area_tab">
+							<h3>
+								tab2
+							</h3>
+						</div>
+						<div class="popular_area_tab">
+							<h3>
+								tab3
+							</h3>
+						</div>
+						<div class="popular_area_tab">
+							<h3>
+								tab4
+							</h3>
+						</div>			
+					</div>
+					<div class="popular_area_content-area">
+						<div class="popular_area_content">
+							<div><img src="./img/sample.jpg" alt=""></div>
+							<div><img src="./img/sample.jpg" alt=""></div>
+							<div><img src="./img/sample.jpg" alt=""></div>
+						</div>
+						<div class="popular_area_content">
+							<div><img src="./img/sample.jpg" alt=""></div>
+							<div><img src="./img/sample.jpg" alt=""></div>
+							<div><img src="./img/sample.jpg" alt=""></div>
+							<div><img src="./img/sample.jpg" alt=""></div>
+						</div>
+						<div class="popular_area_content">
+							<div><img src="./img/sample.jpg" alt=""></div>
+							<div><img src="./img/sample.jpg" alt=""></div>
+						</div>
+						<div class="popular_area_content">
+							<div><img src="./img/sample.jpg" alt=""></div>
+							<div><img src="./img/sample.jpg" alt=""></div>
+							<div><img src="./img/sample.jpg" alt=""></div>
+							<div><img src="./img/sample.jpg" alt=""></div>
+							<div><img src="./img/sample.jpg" alt=""></div>
+						</div>
+					</div>
+				</div>
+			</div><!-- .section -->
+
+			<!-- リスト要素が順番に表示される -->
+			<div class="section" id="dominoFadeinList">
+				<h2>リスト要素が順番に表示される</h2>
+				<div class="dominoFade">
+					<ul>
+						<li>
+							<img src="./img/sample.jpg" alt="">
+							<p>1ニョキ</p>
+						</li>
+						<li>
+							<img src="./img/sample.jpg" alt="">
+							<p>2ニョキ</p>
+						</li>
+						<li>
+							<img src="./img/sample.jpg" alt="">
+							<p>3ニョキ</p>
+						</li>
+						<li>
+							<img src="./img/sample.jpg" alt="">
+							<p>4ニョキ</p>
+						</li>
+						<li>
+							<img src="./img/sample.jpg" alt="">
+							<p>5ニョキ</p>
+						</li>
+						<li>
+							<img src="./img/sample.jpg" alt="">
+							<p>6ニョキ</p>
+						</li>					
+					</ul>
+				</div>
+			</div>
+
+			<!-- YouTube埋め込み -->
+			<div class="section" id="youtube">
+				<h2>YouTube埋め込み</h2>
+				<div class="youtube">
+				  <iframe src="https://www.youtube.com/embed/sR3tgmzCq1s?autoplay=1&mute=1&playsinline=1&loop=1&playlist=sR3tgmzCq1s&controls=0&disablekb=1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+			</div>
+
+			<!-- 順序を逆にする -->
+			<div class="section" id="order_reverse">
+				<h2>順序を逆にする</h2>
+				<div id="order_reverse_L">
+					A
+				</div>
+				<div id="order_reverse_R">
+					B
+				</div>
+			</div>
+
+			<!-- フレックスボックスでPC/SPでカラム数を出し分け -->
+			<div class="section" id="flex_split">
+				<h2>フレックスボックスでPC/SPでカラム数を出し分け</h2>
+				<div class="flex_split">
+					<div>
+						<p>1</p>
+					</div>
+					<div>
+						<p>2</p>
+					</div>
+					<div>
+						<p>3</p>
+					</div>
+					<div>
+						<p>4</p>
+					</div>					
+				</div>
+			</div>
+
+			<!-- SVGアニメーション -->
+			<div class="section" id="svg_animation" style="height:300px;">
+				<h2>SVGアニメーション</h2>
+				<div class="svg01">
+					<svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-labelledby="rssIconTitle" stroke="#2329D6" stroke-width="1" stroke-linecap="square" stroke-linejoin="miter" fill="none" color="#2329D6" style=""> <title id="rssIconTitle">RSS</title> <path stroke-linecap="round" d="M6,18L6,18" class="cSYLmFMf_0"></path> <path d="M10 18C10 15.790861 8.209139 14 6 14M14 18C14 13.581722 10.418278 10 6 10M18 18C18 11.372583 12.627417 6 6 6" class="cSYLmFMf_1"></path> <style data-made-with="vivus-instant">.cSYLmFMf_0{stroke-dasharray:0 2;stroke-dashoffset:1;animation:cSYLmFMf_draw 75ms linear 0ms forwards;}.cSYLmFMf_1{stroke-dasharray:38 40;stroke-dashoffset:39;animation:cSYLmFMf_draw 2925ms linear 75ms forwards;}@keyframes cSYLmFMf_draw{100%{stroke-dashoffset:0;}}@keyframes cSYLmFMf_fade{0%{stroke-opacity:1;}94.44444444444444%{stroke-opacity:1;}100%{stroke-opacity:0;}}</style></svg>
+				</div>
+			</div>
+
+			<!-- CSSアコーディオン -->
+			<div class="section" id="accordion">
+				<h2>CSSアコーディオン</h2>
+				<input id="acd-check1" class="acd-check" type="checkbox">
+				<label class="acd-label" for="acd-check1">クリックで開く1</label>
+				<div class="acd-content">
+				    <p>hello.world!</p>
+				</div>
+				<input id="acd-check2" class="acd-check" type="checkbox">
+				<label class="acd-label" for="acd-check2">クリックで開く2</label>
+				<div class="acd-content">
+				    <p>hello.world2!</p>
+				</div>
+			</div>
+
+
+			<!-- ポップアップウィンドウ -->
+			<!-- <div class="section" id="popup">
+				<div class="r18_overlay">
+				  <div class="r18_btn_area">
+				    <img class="title_popup" src="https://cdn.shopify.com/s/files/1/0268/6903/9278/files/title_popup.jpg?v=1627276951">
+				    <p>最新情報やお得なキャンペーン情報をお届けします。<br>
+				      この機会にぜひご登録ください。</p>
+				    <a class="close_popup"><img src="https://cdn.shopify.com/s/files/1/0268/6903/9278/files/close_popup_btn.jpg?v=1627276832"></a>
+				    <div class="btns">
+				      <a href="https://page.line.me/831ojmlp?openQrModal=true" target="_blank" class="button">
+				        <div><img src="https://cdn.shopify.com/s/files/1/0268/6903/9278/files/line_popup_btn.jpg?v=1627276222"><br>
+				          <p style="
+				                    text-decoration: underline;
+				                    padding-top: 15px;
+				                    line-height: 1;
+				                    margin-bottom: 0;
+				                    ">お友達登録</p></div></a>
+				      <a href="#shopify-section-footer" class="button"><div><img src="https://cdn.shopify.com/s/files/1/0268/6903/9278/files/mailmagazin_popup_btn.jpg?v=1627276222"><br>
+				        <p style="
+				                  text-decoration: underline;
+				                  padding-top: 15px;
+				                  line-height: 1;
+				                  margin-bottom: 0;
+				                  ">メルマガ登録</p></div></a>
+				    </div>
+				  </div>
+				</div>
+			</div> -->
+
+			<!--Tailwind-->
+			<div class="section" id="tailwindcss">
+				<h2>Tailwind</h2>
+				<a href="./tailwind.html" class="bg-black text-white">Tailwindテストページへ</a>
+			</div>
+
+		</div><!-- .container -->
+	</div><!-- .wrapper -->
+	<!--JS-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<!--flickity-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/0.3.1/flickity.pkgd.min.js"></script>
+	<!--inview-->
+	<script src="./js/jquery.inview.min.js"></script>
+	<!--カスタムjs-->
+	<script src="./js/script.js"></script>
+	<!--cookie.js(ポップアップ用)-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+</body>
+</html>
