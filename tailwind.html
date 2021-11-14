@@ -11,6 +11,8 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/0.3.1/flickity.min.css">
 	<!--animateライブラリ-->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css" />
+	<!--easyzoom-->
+	<link rel="stylesheet" href="css/easyzoom.css" />
 	<!--Tailwindもとデータをローカルで読み込み-->
 	<link rel="stylesheet" href="./assets/my_tailwind.css">
 	<!--パージしたTailwindをローカルで読み込み-->
@@ -86,6 +88,14 @@
 			</div>
 
 			<div class="section">
+				<div class="easyzoom easyzoom--overlay">
+					<a href="https://webkaru.net/jquery-plugin/sources/easyzoom/iphone6-plus.jpg">
+						<img src="https://webkaru.net/jquery-plugin/sources/easyzoom/iphone6-plus.jpg" alt="" width="800" height="600" />
+					</a>
+				</div>
+			</div>
+
+			<div class="section">
 				<a class="underline" href="./index.html">もどる</a>
 			</div>
 
@@ -97,6 +107,13 @@
 	</div><!-- .wrapper -->
 	<!--JS-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<!--easyzoom-->
+	<script src="js/easyzoom.js"></script>
+	<script>
+		$(document).ready(function () {
+			$('.easyzoom').easyZoom();
+		});
+	</script>
 	<!--flickity-->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/0.3.1/flickity.pkgd.min.js"></script>
 	<!--inview-->
