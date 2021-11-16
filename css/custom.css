@@ -5,6 +5,14 @@
   font-family: 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', 'Noto Serif JP', sans-serif;
 }*/
 
+@font-face {
+  font-family: 'DSEG14Classic-Bold';
+  src: url('../fonts/fonts-DSEG_v046/DSEG14-Classic/DSEG14Classic-Bold.woff') format('woff')
+}
+.digit{
+  font-family: 'DSEG14Classic-Bold';
+}
+
 /*CMSによってここのラッパーをhtmlでないものに変更すること！*/
 html {
   font-family: 'Noto Serif JP', sans-serif;
