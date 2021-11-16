@@ -11,10 +11,12 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/0.3.1/flickity.min.css">
 	<!--animateライブラリ-->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css" />
+	<!--TailwindcssをCDNで読み込み-->
+	<!-- <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"> -->
 	<!--Tailwindもとデータをローカルで読み込み-->
-	<link rel="stylesheet" href="./assets/my_tailwind.css">
+	<link rel="stylesheet" href="./tailwind.css">
 	<!--パージしたTailwindをローカルで読み込み-->
-	<link rel="stylesheet" href="./assets/my_tailwind_maximam.css">
+	<link rel="stylesheet" href="./dist/tailwind.css">
 </head>
 <body>
 	<div class="wrapper">
@@ -47,23 +49,23 @@
 		<!--flickity カルーセルスライダー-->
 		<div id="main-gallery">
 			<div class="gallery-cell">
-				<a href="#">
-					<img src="./img/sample.jpg" alt="1">
-				</a>
+		      	<a href="#">
+			      	<img src="./img/sample.jpg" alt="1">
+		  		</a>
 			</div>
 			<div class="gallery-cell">
-				<a href="#">
-					<img src="./img/sample.jpg" alt="2">
-				</a>
+		      	<a href="#">
+			      	<img src="./img/sample.jpg" alt="2">
+		  		</a>
 			</div>
 			<div class="gallery-cell">
-				<a href="#">
-					<img src="./img/sample.jpg" alt="3">
-				</a>
+		      	<a href="#">
+			      	<img src="./img/sample.jpg" alt="3">
+		  		</a>
 			</div>
 		</div>
 
-		<div class="container">
+		<div class="container">	
 
 			<!--ページ読み込み完了後に実行-->
 			<div class="section" id="afterload_fadein">
@@ -71,8 +73,8 @@
 				<div class="afterload_fadein_demo01">
 					<img src="./img/sample.jpg" alt="4">
 					<p>ページ読み込み完了したので実行されました</p>
-					<p class="digit">1234567890</p>
-				</div>
+					<p class="digit" style="font-size:40px;">1234567890</p>
+				</div>				
 			</div>
 
 			<!--スクロールフェードイン jsで指定しているクラスに囲まれた要素にisShowクラスがついたりきえたりしてアニメーション-->
@@ -138,7 +140,7 @@
 							<h3>
 								tab4
 							</h3>
-						</div>
+						</div>			
 					</div>
 					<div class="popular_area_content-area">
 						<div class="popular_area_content">
@@ -195,7 +197,7 @@
 						<li>
 							<img src="./img/sample.jpg" alt="">
 							<p>6ニョキ</p>
-						</li>
+						</li>					
 					</ul>
 				</div>
 			</div>
@@ -204,7 +206,7 @@
 			<div class="section" id="youtube">
 				<h2>YouTube埋め込み</h2>
 				<div class="youtube">
-					<iframe src="https://www.youtube.com/embed/sR3tgmzCq1s?autoplay=1&mute=1&playsinline=1&loop=1&playlist=sR3tgmzCq1s&controls=0&disablekb=1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				  <iframe src="https://www.youtube.com/embed/sR3tgmzCq1s?autoplay=1&mute=1&playsinline=1&loop=1&playlist=sR3tgmzCq1s&controls=0&disablekb=1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 				</div>
 			</div>
 
@@ -234,7 +236,7 @@
 					</div>
 					<div>
 						<p>4</p>
-					</div>
+					</div>					
 				</div>
 			</div>
 
@@ -242,44 +244,7 @@
 			<div class="section" id="svg_animation" style="height:300px;">
 				<h2>SVGアニメーション</h2>
 				<div class="svg01">
-					<svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-labelledby="rssIconTitle" stroke="#2329D6" stroke-width="1" stroke-linecap="square" stroke-linejoin="miter" fill="none" color="#2329D6" style="">
-						<title id="rssIconTitle">RSS</title>
-						<path stroke-linecap="round" d="M6,18L6,18" class="cSYLmFMf_0"></path>
-						<path d="M10 18C10 15.790861 8.209139 14 6 14M14 18C14 13.581722 10.418278 10 6 10M18 18C18 11.372583 12.627417 6 6 6" class="cSYLmFMf_1"></path>
-						<style data-made-with="vivus-instant">
-							.cSYLmFMf_0 {
-								stroke-dasharray: 0 2;
-								stroke-dashoffset: 1;
-								animation: cSYLmFMf_draw 75ms linear 0ms forwards;
-							}
-
-							.cSYLmFMf_1 {
-								stroke-dasharray: 38 40;
-								stroke-dashoffset: 39;
-								animation: cSYLmFMf_draw 2925ms linear 75ms forwards;
-							}
-
-							@keyframes cSYLmFMf_draw {
-								100% {
-									stroke-dashoffset: 0;
-								}
-							}
-
-							@keyframes cSYLmFMf_fade {
-								0% {
-									stroke-opacity: 1;
-								}
-
-								94.44444444444444% {
-									stroke-opacity: 1;
-								}
-
-								100% {
-									stroke-opacity: 0;
-								}
-							}
-						</style>
-					</svg>
+					<svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-labelledby="rssIconTitle" stroke="#2329D6" stroke-width="1" stroke-linecap="square" stroke-linejoin="miter" fill="none" color="#2329D6" style=""> <title id="rssIconTitle">RSS</title> <path stroke-linecap="round" d="M6,18L6,18" class="cSYLmFMf_0"></path> <path d="M10 18C10 15.790861 8.209139 14 6 14M14 18C14 13.581722 10.418278 10 6 10M18 18C18 11.372583 12.627417 6 6 6" class="cSYLmFMf_1"></path> <style data-made-with="vivus-instant">.cSYLmFMf_0{stroke-dasharray:0 2;stroke-dashoffset:1;animation:cSYLmFMf_draw 75ms linear 0ms forwards;}.cSYLmFMf_1{stroke-dasharray:38 40;stroke-dashoffset:39;animation:cSYLmFMf_draw 2925ms linear 75ms forwards;}@keyframes cSYLmFMf_draw{100%{stroke-dashoffset:0;}}@keyframes cSYLmFMf_fade{0%{stroke-opacity:1;}94.44444444444444%{stroke-opacity:1;}100%{stroke-opacity:0;}}</style></svg>
 				</div>
 			</div>
 
@@ -289,12 +254,12 @@
 				<input id="acd-check1" class="acd-check" type="checkbox">
 				<label class="acd-label" for="acd-check1">クリックで開く1</label>
 				<div class="acd-content">
-					<p>hello.world!</p>
+				    <p>hello.world!</p>
 				</div>
 				<input id="acd-check2" class="acd-check" type="checkbox">
 				<label class="acd-label" for="acd-check2">クリックで開く2</label>
 				<div class="acd-content">
-					<p>hello.world2!</p>
+				    <p>hello.world2!</p>
 				</div>
 			</div>
 
@@ -327,12 +292,6 @@
 				  </div>
 				</div>
 			</div> -->
-
-			<!--easyzoom-->
-			<div class="section" id="tailwindcss">
-				<h2>easyzoom</h2>
-				<a href="./easyzoom.html" class="bg-black text-white">easyzoomテストページへ</a>
-			</div>
 
 			<!--Tailwind-->
 			<div class="section" id="tailwindcss">

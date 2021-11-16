@@ -5,11 +5,12 @@
   font-family: 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', 'Noto Serif JP', sans-serif;
 }*/
 
+/*フォント DSEG14Classic-Bold.woff*/
 @font-face {
   font-family: 'DSEG14Classic-Bold';
   /*src: url('https://github.com/nanaironanaoto/allset/blob/main/fonts/fonts-DSEG_v046/DSEG14-Classic/DSEG14Classic-Bold.woff') format('woff');*/
-  /*src: url('https://cinec-stg.work/test/fonts/fonts-DSEG_v046/DSEG14-Classic/DSEG14Classic-Bold.woff') format('woff');*/
-  src('https://www.keshikan.net/fonts/DSEG7Modern-Light.woff') format('woff');
+  /*src('https://www.keshikan.net/fonts/DSEG7Modern-Light.woff') format('woff');*/
+  src: url('https://cinec-stg.work/test/fonts/fonts-DSEG_v046/DSEG14-Classic/DSEG14Classic-Bold.woff') format('woff');
 }
 .digit{
   font-family: 'DSEG14Classic-Bold';
@@ -50,8 +51,6 @@ body{
 .left{text-align: left;}
 .right{text-align: right;}
 
-
-
 .wrapper{
   width: 100%;
   height: 2000px;
@@ -69,7 +68,7 @@ body{
 .drawer-wrap{
     position: absolute;
     top: 0;
-    right: 0;
+    right: 0; 
 }
 .drawer-label{
     position: fixed;
@@ -125,7 +124,7 @@ body{
   width: 50px;
   right: 17px;
   top: 14px;
-    z-index: 100;
+    z-index: 100; 
 }
 
 #drawer-icon span {
@@ -202,7 +201,7 @@ body{
     top: 50%;
     left: 50%;
     transform: translateY(-50%) translateX(-50%);
-    -webkit- transform: translateY(-50%) translateX(-50%);
+    -webkit- transform: translateY(-50%) translateX(-50%);    
     width: 100%;
 }
 
@@ -229,7 +228,7 @@ body{
 
 .parallax_wrap02{
   position: relative;
-  height: 200px;
+  height: 200px;  
   background: #f9b6f7;
   overflow: hidden;
 }
@@ -298,7 +297,7 @@ body{
     margin: 0 0 10px;
     text-align: left;
     background: #eee;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid #fff;    
 }
 /*TOP人気エリアのタブ切り替えEND*/
 
@@ -318,7 +317,7 @@ body{
   opacity: 1.0;
 }
 
-.youtube {
+.youtube { 
     width: 100%;
     position: relative;
     padding-bottom: calc(100% / 1.777);
@@ -331,7 +330,7 @@ body{
     position: absolute;
     top: 0;
     left: 0;
-    pointer-events: none;
+    pointer-events: none; 
 }
 
 .flex_split{
@@ -359,7 +358,7 @@ body{
 
 /*480以下*/
 @media screen and (max-width: 480px) {
-  .youtube {
+  .youtube { 
       width: 100%;
       position: relative;
       padding-bottom: 56.25%;
@@ -372,7 +371,7 @@ body{
       position: absolute;
       top: 0;
       left: 0;
-      pointer-events: none;
+      pointer-events: none; 
   }
   .flex_split>div{
     width: 45%;
@@ -457,7 +456,7 @@ body{
 .r18_btn_area p {
     font-size: 14px;
     margin-top: 5px;
-}
+}  
 .title_popup {
     width: 324px;
     margin: 0 auto;
@@ -472,7 +471,7 @@ body{
 }
 .r18_btn_area .btns img {
     width: 48px;
-    margin: 0 auto;
+    margin: 0 auto;    
 }
 
 /*テキストエフェクト*/
@@ -501,8 +500,8 @@ body{
     }
     100% {
         color: #000;
-    }
-}
+    }      
+}  
 .over_color {
     background: #7575e4;
     position: absolute;
@@ -527,14 +526,14 @@ body{
         transform: scaleX(100%);
     }
     40% {
-        transform-origin: right;
+        transform-origin: right;      
         transform: scaleX(100%);
     }
     100% {
         transform-origin: right;
         transform: scaleX(0);
-    }
-}
+    }      
+}  
 
 @media screen and (max-width: 480px){
   #drawer-content{
@@ -557,97 +556,38 @@ body{
   }
   btns>a:last-child>div {
       margin-left: 25px;
+  }    
+}
+
+/*css gird test*/
+.grid_test_wrapper{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-auto-rows: 200px;
+  column-gap: 10px;
+  row-gap: 1em;
+}
+.grid_test_wrapper>div{
+  border: 1px solid #ccc;
+}
+.grid_test_wrapper>.box1 {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+@media screen and (max-width: 1000px){
+  .grid_test_wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 }
+@media screen and (max-width: 480px){
+  .grid_test_wrapper{
+    display: block;
+    width: calc(100% - 15px);
+    margin:  0 auto;
+  }
+}
+/*汎用的css部分END*/
 
-/*checkbox, radioのカスタム*/
-/* チェックボックス */
-input[type=checkbox] {
-    display: none;
-}
-.checkbox02 {
-    box-sizing: border-box;
-    cursor: pointer;
-    display: inline-block;
-    padding: 5px 30px;
-    position: relative;
-    width: auto;
-}
-.checkbox02::before {
-    background: #fff;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    content: '';
-    display: block;
-    height: 16px;
-    left: 5px;
-    margin-top: -8px;
-    position: absolute;
-    top: 50%;
-    width: 16px;
-}
-.checkbox02::after {
-    border-right: 6px solid #00cccc;
-    border-bottom: 3px solid #00cccc;
-    content: '';
-    display: block;
-    height: 20px;
-    left: 12px;
-    margin-top: -16px;
-    opacity: 0;
-    position: absolute;
-    top: 50%;
-    transform: rotate(45deg);
-    width: 9px;
-}
-input[type=checkbox]:checked + .checkbox02::before {
-    border-color: #666;
-}
-input[type=checkbox]:checked + .checkbox02::after {
-    opacity: 1;
-}
-
-/* ラジオボタン */
-input[type=radio] {
-    display: none;
-}
-.radio02 {
-    box-sizing: border-box;
-    cursor: pointer;
-    display: inline-block;
-    padding: 5px 30px;
-    position: relative;
-    width: auto;
-}
-.radio02::before {
-    background: #fff;
-    border: 1px solid #ccc;
-    border-radius: 50%;
-    content: '';
-    display: block;
-    height: 16px;
-    left: 5px;
-    margin-top: -8px;
-    position: absolute;
-    top: 50%;
-    width: 16px;
-}
-.radio02::after {
-    background: #00cccc;
-    border-radius: 50%;
-    content: '';
-    display: block;
-    height: 8px;
-    left: 9px;
-    margin-top: -4px;
-    opacity: 0;
-    position: absolute;
-    top: 50%;
-    width: 8px;
-}
-input[type=radio]:checked + .radio02::before {
-    border-color: #666;
-}
-input[type=radio]:checked + .radio02::after {
-    opacity: 1;
-}
