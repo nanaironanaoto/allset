@@ -7,8 +7,9 @@
 
 @font-face {
   font-family: 'DSEG14Classic-Bold';
-  /*src: url('https://github.com/nanaironanaoto/allset/blob/main/fonts/fonts-DSEG_v046/DSEG14-Classic/DSEG14Classic-Bold.woff') format('woff')*/
-  src: url('https://cinec-stg.work/test/fonts/fonts-DSEG_v046/DSEG14-Classic/DSEG14Classic-Bold.woff') format('woff')
+  /*src: url('https://github.com/nanaironanaoto/allset/blob/main/fonts/fonts-DSEG_v046/DSEG14-Classic/DSEG14Classic-Bold.woff') format('woff');*/
+  /*src: url('https://cinec-stg.work/test/fonts/fonts-DSEG_v046/DSEG14-Classic/DSEG14Classic-Bold.woff') format('woff');*/
+  src('https://www.keshikan.net/fonts/DSEG7Modern-Light.woff') format('woff');
 }
 .digit{
   font-family: 'DSEG14Classic-Bold';
