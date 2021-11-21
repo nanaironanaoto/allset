@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Tailwindテスト</title>
+	<!--CSS-->
+	<link rel="stylesheet" href="./css/custom.css">
+	<link rel="stylesheet" href="./css/destyle.css">
+	<!--flickity-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/0.3.1/flickity.min.css">
+	<!--animateライブラリ-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css" />
+	<!--easyzoom-->
+	<link rel="stylesheet" href="css/easyzoom.css" />
+	<!--Tailwindもとデータをローカルで読み込み-->
+	<link rel="stylesheet" href="./assets/my_tailwind.css">
+	<!--パージしたTailwindをローカルで読み込み-->
+	<link rel="stylesheet" href="./assets/my_tailwind_maximam.css">
+	<style>
+		html,
+		body {
+			font-size: 62.5%;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+
+		<div class="drawer-wrap">
+			<input id="drawer-checkbox" type="checkbox">
+			<label id="drawer-icon" for="drawer-checkbox"><span></span></label>
+			<label id="drawer-close" for="drawer-checkbox"></label>
+			<span class="drawer-label">ドロワー</span>
+			<div id="drawer-content">
+				<p>ここがドロワーとして出てくる部分です。</p>
+				<ul>
+					<li><a href="#tailwindcss">Tailwind</a></li>
+				</ul>
+			</div>
+		</div>
+
+
+
+		<div class="container">
+
+			<div class="section">
+				<ul>
+					<li>
+						<p class="text-xs">text-xsテスト文章TEST LETTER＆123456789</p>
+					</li>
+					<li>
+						<p class="text-sm">text-smテスト文章TEST LETTER＆123456789</p>
+					</li>
+					<li>
+						<p class="text-base">text-baseテスト文章TEST LETTER＆123456789</p>
+					</li>
+					<li>
+						<p class="text-lg">text-lgテスト文章TEST LETTER＆123456789</p>
+					</li>
+					<li>
+						<p class="text-xl">text-xlテスト文章TEST LETTER＆123456789</p>
+					</li>
+					<li>
+						<p class="text-2xl">text-2xlテスト文章TEST LETTER＆123456789</p>
+					</li>
+					<li>
+						<p class="text-3xl">text-3xlテスト文章TEST LETTER＆123456789</p>
+					</li>
+					<li>
+						<p class="text-4xl">text-4xlテスト文章TEST LETTER＆123456789</p>
+					</li>
+					<li>
+						<p class="text-5xl">text-5xlテスト文章TEST LETTER＆123456789</p>
+					</li>
+					<li>
+						<p class="text-6xl">text-6xlテスト文章TEST LETTER＆123456789</p>
+					</li>
+					<li>
+						<p class="text-10px">text-10pxテスト文章TEST LETTER＆123456789</p>
+					</li>
+					<li>
+						<p class="text-12px">text-12pxテスト文章TEST LETTER＆123456789</p>
+					</li>
+					<li>
+						<p class="text-14px">text-14pxテスト文章TEST LETTER＆123456789</p>
+					</li>
+					<li>
+						<p class="text-16px">text-16pxテスト文章TEST LETTER＆123456789</p>
+					</li>
+					<li>
+						<p class="text-20px">text-20pxテスト文章TEST LETTER＆123456789</p>
+					</li>
+					<li>
+						<p class="text-24px">text-24pxテスト文章TEST LETTER＆123456789</p>
+					</li>
+					<li>
+						<p class="text-28px">text-28pxテスト文章TEST LETTER＆123456789</p>
+					</li>
+					<li>
+						<p class="text-32px">text-32pxテスト文章TEST LETTER＆123456789</p>
+					</li>
+					<li>
+						<p class="text-36px">text-36pxテスト文章TEST LETTER＆123456789</p>
+					</li>
+					<li>
+						<p class="text-40px">text-40pxテスト文章TEST LETTER＆123456789</p>
+					</li>
+				</ul>
+			</div>
+
+		</div><!-- .container -->
+
+
+
+
+	</div><!-- .wrapper -->
+	<!--JS-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<!--easyzoom-->
+	<script src="js/easyzoom.js"></script>
+	<script>
+		$(document).ready(function () {
+			$('.easyzoom').easyZoom();
+		});
+	</script>
+	<!--flickity-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/0.3.1/flickity.pkgd.min.js"></script>
+	<!--inview-->
+	<script src="./js/jquery.inview.min.js"></script>
+	<!--カスタムjs-->
+	<script src="./js/script.js"></script>
+	<!--cookie.js(ポップアップ用)-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+	<script>
+		$('button').on('click', function () {
+			alert("クリックされました");
+		});
+	</script>
+</body>
+</html>

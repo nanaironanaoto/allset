@@ -7,6 +7,23 @@ module.exports = {
   },
   theme: {
     fontSize: {
+      'xs': '0.75rem',
+      'sm': '0.875rem',
+      'base': '1rem',
+      'lg': '1.125rem',
+      'xl': '1.25rem',
+      '2xl': '1.5rem',
+      '3xl': '1.875rem',
+      '4xl': '2.25rem',
+      '5xl': '3rem',
+      '6xl': '4rem',
+      '10px': '10px',
+      '10px': '10px',
+      '10px': '10px',
+      '10px': '10px',
+      '10px': '10px',
+      '10px': '10px',
+      '10px': '10px',
       '10px': '10px',
       '11px': '11px',
       '12px': '12px',
@@ -50,6 +67,7 @@ module.exports = {
       '50px': '50px',
     },
     padding: {
+      '0': '0',
       '1px': '1px',
       '2px': '2px',
       '3px': '3px',
@@ -253,6 +271,7 @@ module.exports = {
     },
     margin: {
       'auto': 'auto',
+      '0': '0',
       '1px': '1px',
       '2px': '2px',
       '3px': '3px',
@@ -564,6 +583,7 @@ module.exports = {
       '5px': '5px',
     },
     gap: {
+      '0': '0',
       '1px': '1px',
       '2px': '2px',
       '3px': '3px',

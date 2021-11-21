@@ -96,6 +96,7 @@
 			</div>
 
 			<div class="section">
+				<button class="bg-black text-white px-20px py-5px">JSテスト</button>
 				<a class="underline" href="./index.html">もどる</a>
 			</div>
 
@@ -122,5 +123,10 @@
 	<script src="./js/script.js"></script>
 	<!--cookie.js(ポップアップ用)-->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+	<script>
+		$('button').on('click', function () {
+			alert("クリックされました");
+		});
+	</script>
 </body>
 </html>
