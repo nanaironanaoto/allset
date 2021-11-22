@@ -2,7 +2,7 @@ const theme = require('./tailwind-theme/index.js')
 
 module.exports = {
   purge: {
-    enabled: false,   //  purgeするかどうか
+    enabled: true,   //  purgeするかどうか
     content: ['./*.html', './*/*.liquid', './*/*/*.liquid', './*.php', './*/*.php', './*/*/*.php',]  // purge対象のファイル
   },
   theme: {
