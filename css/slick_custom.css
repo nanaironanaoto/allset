@@ -1,0 +1,136 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* slide-box */
+
+.slide-box {
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+/* slide */
+
+.slide {
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+.slide .item {
+  position: relative;
+  height: 100%;
+}
+.slide .item a {
+  display: block;
+}
+.slide .item::before {
+  display: block;
+  padding-top: 39%;
+  content: "";
+}
+.slide .item .image {
+  position: relative;
+  overflow: hidden;
+}
+.slide .item img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  width: 100%;
+}
+.slide > .slick-list,
+.slide > .slick-list > .slick-track,
+.slide > .slick-list > .slick-track > .slick-slide > div {
+  position: relative;
+  height: 100%;
+}
+
+/* slide-navigation */
+
+.slide-navigation {
+  line-height: 0;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+.slide-navigation .item {
+  position: relative;
+  cursor: pointer;
+}
+.slide-navigation .item .image {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.slide-navigation .item .image::before {
+  display: block;
+  padding-top: 35%;
+  content: "";
+}
+.slide-navigation .item .image::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  content: "";
+  opacity: 0.5;
+  background: #000;
+}
+.slide-navigation .slick-current .image::after {
+  opacity: 0;
+}
+.slide-navigation .item .image {
+  position: relative;
+  overflow: hidden;
+}
+.slide-navigation .item .image img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+  .slide-navigation {
+    width: 100%;
+  }
+  .slide-navigation .item .image::before {
+    padding-top: 50%;
+  }
+}
+
+/* slick */
+
+.slick-vertical .slick-slide {
+  border: 0 solid transparent;
+}
+.slick-arrow {
+  z-index: 999;
+}
+.slick-prev {
+  top: 25px;
+  bottom: 0;
+  left: 20px;
+  right: auto;
+  margin: auto;
+}
+.slick-next {
+  top: 25px;
+  bottom: 0;
+  left: auto;
+  right: 20px;
+  margin: auto;
+}
