@@ -1,0 +1,80 @@
+ <!DOCTYPE html>
+ <html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+ <style>
+    #wrap {
+      background-color: #ddd;
+      padding: 50px 0;
+    }
+
+    #slider, #thumbnail_slider {
+      width: 300px;
+      margin: 0 auto 10px;
+    }
+
+    .slide-item img {
+      width: 100%;
+    }
+
+    .thumbnail-item img {
+      width: 98%;
+      margin: 0 auto;
+    }
+</style>
+<!-- slickのCSS -->
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+</head>
+ <body>
+  <div id="wrap">
+    <ul id="slider">
+      <li class="slide-item"><img data-lazy="https://takblog.site/wp-content/themes/takblog/assets/img/blanks/post19_1.jpg" alt="画像"></li>
+      <li class="slide-item"><img data-lazy="https://takblog.site/wp-content/themes/takblog/assets/img/blanks/post19_2.jpg" alt="画像"></li>
+      <li class="slide-item"><img data-lazy="https://takblog.site/wp-content/themes/takblog/assets/img/blanks/post19_3.jpg" alt="画像"></li>
+      <li class="slide-item"><img data-lazy="https://takblog.site/wp-content/themes/takblog/assets/img/blanks/post19_4.jpg" alt="画像"></li>
+      <li class="slide-item"><img data-lazy="https://takblog.site/wp-content/themes/takblog/assets/img/blanks/post19_5.jpg" alt="画像"></li>
+      <li class="slide-item"><img data-lazy="https://takblog.site/wp-content/themes/takblog/assets/img/blanks/post19_6.jpg" alt="画像"></li>
+    </ul>
+    <ul id="thumbnail_slider">
+      <li class="thumbnail-item"><img data-lazy="https://takblog.site/wp-content/themes/takblog/assets/img/blanks/post19_1.jpg" alt="画像"></li>
+      <li class="thumbnail-item"><img data-lazy="https://takblog.site/wp-content/themes/takblog/assets/img/blanks/post19_2.jpg" alt="画像"></li>
+      <li class="thumbnail-item"><img data-lazy="https://takblog.site/wp-content/themes/takblog/assets/img/blanks/post19_3.jpg" alt="画像"></li>
+      <li class="thumbnail-item"><img data-lazy="https://takblog.site/wp-content/themes/takblog/assets/img/blanks/post19_4.jpg" alt="画像"></li>
+      <li class="thumbnail-item"><img data-lazy="https://takblog.site/wp-content/themes/takblog/assets/img/blanks/post19_5.jpg" alt="画像"></li>
+      <li class="thumbnail-item"><img data-lazy="https://takblog.site/wp-content/themes/takblog/assets/img/blanks/post19_6.jpg" alt="画像"></li>
+    </ul>
+  </div>
+  <!-- jQuery -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+
+  <!-- slickのJavaScript -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script>
+    $(function(){
+     var mainSlider = "#slider"; //メインスライダーid
+     var thumbnailSlider = "#thumbnail_slider"; //サムネイルスライダーid
+     
+      $(mainSlider).slick({
+        autoplay: true,
+        speed: 1000,
+        arrows: false,
+        asNavFor: thumbnailSlider
+      });
+      $(thumbnailSlider).slick({
+        slidesToShow: 3,
+        speed: 1000,    
+        asNavFor: mainSlider
+      });
+      //#thumbnail_sliderでクリックしたスライドをカレントにする
+      $(thumbnailSlider+" .slick-slide").on('click',function(){
+        var index = $(this).attr("data-slick-index");
+        $(thumbnailSlider).slick("slickGoTo",index,false);
+      });
+    });
+  </script>
+
+</body>
+</html>
