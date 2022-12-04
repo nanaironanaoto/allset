@@ -9,20 +9,8 @@
   <link rel="stylesheet" href="./css/slick_custom.css">
 </head>
 <body>
-<div class="sliderArea">
-  <div class="regular slider">
-    <div><img src="https://125naroom.com/demo/img/itukanokotonokoto01.jpg" alt="125naroom"></div>
-    <div><img src="https://125naroom.com/demo/img/itukanokotonokoto02.jpg" alt="125naroom"></div>
-    <div><img src="https://125naroom.com/demo/img/itukanokotonokoto03.jpg" alt="125naroom"></div>
-    <div><img src="https://125naroom.com/demo/img/itukanokotonokoto04.jpg" alt="125naroom"></div>
-    <div><img src="https://125naroom.com/demo/img/itukanokotonokoto05.jpg" alt="125naroom"></div>
-  </div>
-</div>
 
-
-<br><br><br><br><br><br><br>
-
-<div class="slide-box">
+<div class="slide-box" style="width: 700px; margin:0 auto;">
   <ul class="slide">
     <li class="item">
       <a href="#"><img src="https://picsum.photos/id/301/1024/768" alt=""/></a>
@@ -72,14 +60,6 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script>
-$(document).on('ready', function() {
-  $(".regular").slick({
-    //autoplay: true, // 自動再生を設定
-    //autoplaySpeed: 4000, // 自動再生のスピード（ミリ秒単位）
-    dots: true // ドットインジケーターの表示
-  });
-});
-
 $(function() {
   var slide_main = $(".slide").slick({
     asNavFor: ".slide-navigation",
