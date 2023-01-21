@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+  height: 500vh;
+}
+
+.wrapper {
+  background-color: #ccc;
+  /* padding: 300px; */
+  height: 200vh;
+  width: 100vw;
+}
+
+.text {
+  padding: 10%;
+  position: absolute;
+  z-index: 1;
+}
+
+.sticky {
+  background-color: #009688;
+  position: -webkit-sticky;
+  /* Safariに対応する */
+  position: sticky;
+  /* 要素を固定/解除する */
+  top: 0;
+  /* 縦方向の閾値 */
+  left: 0;
+  /* 横方向の閾値 */
+}
+
+.sticky img {
+  width: 100%;
+}
