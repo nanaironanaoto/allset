@@ -1,0 +1,145 @@
+.scroll_container {
+  width: 100%;
+  height: 100vh;
+  scroll-snap-type: y mandatory;
+  overflow: scroll;
+}
+
+.scroll_container_child {
+  height: 100vh;
+  scroll-snap-align: start;
+}
+
+img {
+  width: 100%;
+}
+
+video {
+  width: 100%;
+}
+
+.wrapper {
+  background-color: #ccc;
+  /* padding: 300px; */
+  height: 200vh;
+  width: 100vw;
+}
+
+.text {
+  padding: 10%;
+  position: absolute;
+  z-index: 1;
+}
+
+.sticky {
+  background-color: #009688;
+  position: -webkit-sticky;
+  /* Safariに対応する */
+  position: sticky;
+  /* 要素を固定/解除する */
+  top: 0;
+  /* 縦方向の閾値 */
+  left: 0;
+  /* 横方向の閾値 */
+}
+
+.sticky img,
+.sticky .sticky_bg_movie {
+  width: 100%;
+}
+
+.bnr01_wrapper {
+  background: #014b97;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#logo_frame_static {
+  opacity: 0;
+}
+
+.logo_frame {
+  object-fit: cover;
+  height: 100vh;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.logo_side_dog {
+  width: 19vw;
+  z-index: 1;
+  position: absolute;
+  bottom: -100px;
+  right: 100px;
+}
+
+.video_wrapper {
+  display: flex;
+  justify-content: center;
+  width: 500px;
+  position: relative;
+  top: -160px;
+}
+
+.video_wrapper .logo_movie {
+  width: 50%;
+}
+
+.bnr01_wrapper>.bnr01_container {
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#logo_frame_static.isShow {
+  opacity: 1;
+  transition: 1000ms;
+}
+
+@media screen and (max-width: 767px) {
+  .pc {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .sp {
+    display: none;
+  }
+}
+
+/*縦書きテキスト指定*/
+.vertical_textbox_wrapper {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.vertical_textbox {
+  position: absolute;
+  right: 0;
+  z-index: 1;
+}
+
+.vertical_textbox p {
+  writing-mode: vertical-rl;
+}
+
+.vertical_textbox_wrapper_bg {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.vertical_textbox_wrapper_bg img {
+  object-fit: cover;
+  object-position: bottom right;
+  height: 100vh;
+}
