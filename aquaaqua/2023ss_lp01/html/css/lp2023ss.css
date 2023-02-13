@@ -1,0 +1,263 @@
+.wrapper_lp2023ss,
+.container_lp2023ss {
+  /* font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif; */
+  font-family: HelveticaNeue,
+    "游ゴシック体",
+    YuGothic,
+    "游ゴシック Medium",
+    "Yu Gothic Medium",
+    "游ゴシック",
+    "Yu Gothic",
+    sans-serif;
+  color: #656669;
+  line-height: 1.7;
+}
+.scrollfadein {
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.scrollfadein.isShow{
+  opacity: 1;
+}
+.afterload_fadein01{
+  opacity: 0;
+  transition: 0.7s;
+}
+.afterload_fadein02 {
+  opacity: 0;
+  transition: 0.4s;
+  transition-delay: 0.4s;
+}
+.dominoFade li {
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.dominoFade li.dominofadeIn{
+  opacity: 1;
+}
+
+.wrapper_lp2023ss .auto_carning {
+  font-feature-settings: "palt";
+  letter-spacing: 0.7px;
+}
+
+.wrapper_lp2023ss .wide_carning {
+  letter-spacing: 2px;
+}
+
+#conversionA {
+  overflow: hidden;
+}
+
+.wrapper_lp2023ss img {
+  width: 100%;
+}
+
+.wrapper_lp2023ss img+p {
+  margin-top: 0;
+}
+.wrapper_lp2023ss{
+  margin-top: -1000px;
+  padding-top: 1000px;
+}
+.wrapper_lp2023ss .border-bottom {
+  opacity: 0;
+  border-bottom: 1px solid #666;
+  transition: 0.5s;
+}
+.wrapper_lp2023ss .border-bottom.isShow {
+  opacity: 1;
+}
+
+.wrapper_lp2023ss .color_title {
+  margin-top: -6px;
+}
+
+.wrapper_lp2023ss .color_thumb {
+  width: 191px;
+  padding-right: 10px;
+}
+
+.wrapper_lp2023ss .text-32px {
+  font-size: 32px;
+}
+
+.wrapper_lp2023ss .text-34px {
+  font-size: 34px;
+}
+
+.wrapper_lp2023ss .text-36px {
+  font-size: 36px;
+}
+
+.wrapper_lp2023ss .w-213px {
+  width: 213px;
+}
+
+.wrapper_lp2023ss .w-293px {
+  width: 293px;
+}
+
+.wrapper_lp2023ss .wrapper_lp2023ss {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.wrapper_lp2023ss .container_lp2023ss {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.wrapper_lp2023ss .conversion_btn {
+  background: #5a5a5a;
+  color: #fff;
+  height: 50px;
+  width: 151px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 17px;
+  text-decoration: none;
+}
+
+.wrapper_lp2023ss .product_wtach_btn {
+  background: #5a5a5a;
+  color: #fff;
+  height: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 17px;
+  text-decoration: none;
+}
+
+.wrapper_lp2023ss .conversion_btn img {
+  width: 15px;
+}
+
+.wrapper_lp2023ss .new_icon {
+  position: absolute;
+  left: 128px;
+  width: 52px;
+}
+
+.wrapper_lp2023ss .h-273px {
+  height: 273px;
+}
+
+.wrapper_lp2023ss .mt-124px {
+  margin-top: 124px;
+}
+
+.wrapper_lp2023ss .text-36px {
+  font-size: 36px;
+}
+
+.wrapper_lp2023ss .mb-120px {
+  margin-bottom: 120px;
+}
+
+.wrapper_lp2023ss .mb-180px {
+  margin-bottom: 180px;
+}
+
+.wrapper_lp2023ss .irodata {
+  width: 100%;
+}
+
+.wrapper_lp2023ss .irodata ul {
+  width: 100%;
+}
+
+.wrapper_lp2023ss .irodata li {
+  width: 48.5%;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.wrapper_lp2023ss .irodata img {
+  width: 50px;
+}
+
+.wrapper_lp2023ss .burashi-img-trim {
+  object-fit: cover;
+  height: 220px;
+}
+
+.wrapper_lp2023ss .burashi-note {
+  top: -60px;
+}
+
+@media screen and (max-width: 767px) {
+  .pc {
+    display: none;
+  }
+
+  .conversion_first .conversion_product_image{
+    display: none;
+  }
+
+  .wrapper_lp2023ss img+p {
+    margin-top: -13px;
+  }
+
+  .wrapper_lp2023ss .burashi-img-trim {
+    height: 140px;
+  }
+
+  .wrapper_lp2023ss .irodata {
+    margin-bottom: 50px;
+    font-size: 11px;
+  }
+
+  .wrapper_lp2023ss .burashi-note {
+    font-size: 13px;
+    top: -30px;
+  }
+
+  .wrapper_lp2023ss .container_lp2023ss {
+    padding: 0 10px
+  }
+
+  .wrapper_lp2023ss .color_thumb {
+    width: 150px;
+    padding-right: 20px;
+  }
+
+  .wrapper_lp2023ss .h-273px {
+    height: auto;
+  }
+
+  .wrapper_lp2023ss .conversion_btn {
+    height: 45px;
+    width: 164px;
+    font-size: 16px;
+  }
+
+  .wrapper_lp2023ss .new_icon {
+    left: 94px;
+    width: 40px;
+  }
+
+  .wrapper_lp2023ss .text-36px {
+    font-size: 24px;
+  }
+
+  .wrapper_lp2023ss .h-190px {
+    height: 180px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .sp {
+    display: none;
+  }
+
+  .wrapper_lp2023ss .h-203px {
+    height: 203px;
+  }
+}

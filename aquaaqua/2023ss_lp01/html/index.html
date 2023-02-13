@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="検索結果でサイト名の下に表示される「サイトの説明文」">
+    <link rel="apple-touch-icon" sizes="180x180" href="アップルタッチ用のファビコン(相対パスOK）.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="32サイズのファビコン画像(相対パスOK）.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="16サイズのファビコン画像(相対パスOK）.png">
+    <link rel="manifest" href="PWA化のためのマニフェストファイル.webmanifest">
+    <meta name="msapplication-TileColor" content="Windowsピン留めのテーマカラーを設定→#ffffff">
+    <meta name="theme-color" content="theme-colorを設定→#ffffff">
+    <meta name="msapplication-TileImage" content="Windowsピン留め時の画像(絶対パス）.png" />
+    <meta property="og:description" content="SNSでシェアされたときに表示するサイトの説明文">
+    <meta property="og:title" content="SNSでシェアされたときに表示するサイトのタイトル">
+    <meta property="og:image" content="SNSでシェアされたときに表示する画像※かならず絶対パスを記載（相対パス不可）https://....../img/icons/logo.png">
+    <meta property="og:image:width" content="画像の幅px">
+    <meta property="og:image:height" content="画像の高さpx">
+    <meta property="og:type" content="urlがトップページの場合→website、トップページ以外の場合→article">
+    <meta property="og:url" content="https://........">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/lp2023ss.css">
+    <link rel="stylesheet" href="./css/destyle.css">
+    <link rel="stylesheet" href="https://nanaironanaoto.github.io/tailwind_mini/assets/my_tailwind_mini_minified.css">
+</head>
+<body>
+    <div class="wrapper_lp2023ss"><!--MV-->
+        <div>
+            <div>
+                <h1 style="visibility: hidden;" class="absolute">AAQUA AQUA 2023SS Collection</h1>
+                <img src="./img/mv01_pc.jpg" alt="" class="afterload_fadein01 pc">
+                <img src="./img/mv01_sp.jpg" alt="" class="afterload_fadein01 sp">
+            </div>
+            <div class="container_lp2023ss text-center">
+                <p class="afterload_fadein02 wide_carning font-semibold text-28px mt-84px md:mt-36px pb-100px md:pb-0 mb-90px md:mb-40px md:text-18px">
+                    繊細なまつ毛を<br class="sp">うるおいケアしながら美しく彩る<br>
+                    アクア・アクアのマスカラから<br>
+                    エッジを効かせる<br class="sp">カーキ＆ホワイトが新登場</p>
+            </div>
+        </div>
+    </div><!--MV-->
+
+    <div class="wrapper_lp2023ss">
+
+        <!-- コンバージョンのクローン -->
+        <div class="container_lp2023ss conversion_first" id="getCloneA"></div>
+
+        <div class="container_lp2023ss mb-120px">
+            <div>
+                <div>
+                    <div class="flex justify-center items-center mb-40px pb-10px gap-x-20px border-bottom">
+                        <h2 class="scrollfadein font-semibold inline text-24px md:text-19px"
+                        style="white-space: nowrap;" data-offset="1000">7色からお選びいただけます</h2>
+                        <br class="sp">
+                        <!-- <p class="inline text-16px md:text-14px">2,750円<span class="text-10px">（税込）</span></p> -->
+                    </div>
+                </div>
+                <div><!--色玉の説明-->
+                    <!-- <h3 class="text-center text-24px md:text-16px mb-40px">7色からお選びいただけます
+                    </h3> -->
+                    <div class="dominoFade" id="dominoFadeinList">
+                        <ul class="grid grid-cols-2 gap-x-70px gap-y-70px md:flex md:flex-flow-col">
+                            <li class="flex relative h-203px h-190px"><!--色玉01-->
+                                <div>
+                                    <img class="color_thumb" src="./img/color_01.jpg" alt="">
+                                </div>
+                                <div class="flex flex-flow-col justify-between">
+                                    <div>
+                                        <h4 class="color_title text-19px md:text-15px">
+                                            01 ブラック</h4>
+                                        <p class="auto_carning mt-7px text-16px md:text-13px">
+                                            ミネラルの美しい漆黒が、どんな時でも印象的な目もとをつくりだしてくれます。迷ったら、まずはブラックから。
+                                        </p>
+                                    </div>
+                                    <form method="post" name="form1" action="link.php">
+                                        <input type="hidden" name="user_name" value="01 シャンパンピーチ">
+                                        <a class="conversion_btn" href="javascript:form1.submit()">購入する<img src="./img/cart.png" alt=""></a>
+                                    </form>
+                                </div>
+                            </li>
+                            <li class="flex relative h-203px h-190px md:h-200px"><!--色玉02-->
+                                <div>
+                                    <img class="color_thumb" src="./img/color_02.jpg" alt="">
+                                </div>
+                                <div class="flex flex-flow-col justify-between">
+                                    <div>
+                                        <div>
+                                            <h4 class="color_title text-19px md:text-15px">
+                                                02 ブラウン</h4>
+                                            <p class="auto_carning mt-7px text-16px md:text-13px">
+                                                ナチュラルで優しい、柔らかい印象を与えるライトブラウン。ブラック以外のマスカラを使ったことのない方へ。
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <form method="post" name="form1" action="link.php">
+                                        <input type="hidden" name="user_name" value="01 シャンパンピーチ">
+                                        <a class="conversion_btn" href="javascript:form1.submit()">購入する<img src="./img/cart.png" alt=""></a>
+                                    </form>
+                                </div>
+                            </li>
+                            <li class="flex relative h-203px h-190px"><!--色玉03-->
+                                <div>
+                                    <img class="color_thumb" src="./img/color_03.jpg" alt="">
+                                </div>
+                                <!-- <div class="new_icon">
+                                    <img src="./img/new_icon.png" alt="">
+                                </div> -->
+                                <div class="flex flex-flow-col justify-between">
+                                    <div>
+                                        <h4 class="color_title text-19px md:text-15px">
+                                            03 ネイビーブルー</h4>
+                                        <p class="auto_carning mt-7px text-16px md:text-13px">
+                                            視線が動くとさりげなくブルーの存在感を感じるおしゃれで上品なネイビーブルー。ネイビーには白目をクリアに見せる効果も。
+                                        </p>
+                                    </div>
+                                    <form method="post" name="form1" action="link.php">
+                                        <input type="hidden" name="user_name" value="01 シャンパンピーチ">
+                                        <a class="conversion_btn" href="javascript:form1.submit()">購入する<img src="./img/cart.png" alt=""></a>
+                                    </form>
+                                </div>
+                            </li>
+                            <li class="flex relative h-203px h-190px"><!--色玉04-->
+                                <div>
+                                    <img class="color_thumb" src="./img/color_04.jpg" alt="">
+                                </div>
+                                <!-- <div class="new_icon">
+                                    <img src="./img/new_icon.png" alt="">
+                                </div> -->
+                                <div class="flex flex-flow-col justify-between">
+                                    <div>
+                                        <h4 class="color_title text-19px md:text-15px">
+                                            04 オレンジブラウン</h4>
+                                        <p class="auto_carning mt-7px text-16px md:text-13px">
+                                            テクニックフリーなブラウン系オレンジ。肌なじみの良い色でほのかなオレンジがキュートな印象へ。
+                                        </p>
+                                    </div>
+                                    <form method="post" name="form1" action="link.php">
+                                        <input type="hidden" name="user_name" value="01 シャンパンピーチ">
+                                        <a class="conversion_btn" href="javascript:form1.submit()">購入する<img src="./img/cart.png" alt=""></a>
+                                    </form>
+                                </div>
+                            </li>
+                            <li class="flex relative h-203px h-190px"><!--色玉05-->
+                                <div>
+                                    <img class="color_thumb" src="./img/color_05.jpg" alt="">
+                                </div>
+                                <!-- <div class="new_icon">
+                                    <img src="./img/new_icon.png" alt="">
+                                </div> -->
+                                <div class="flex flex-flow-col justify-between">
+                                    <div>
+                                        <h4 class="color_title text-19px md:text-15px">
+                                            05 レッド</h4>
+                                        <p class="auto_carning mt-7px text-16px md:text-13px">
+                                            透明感のある優しい発色のレッド。目元に血色感をプラスしてパッと明るい印象へ。
+                                        </p>
+                                    </div>
+                                    <form method="post" name="form1" action="link.php">
+                                        <input type="hidden" name="user_name" value="01 シャンパンピーチ">
+                                        <a class="conversion_btn" href="javascript:form1.submit()">購入する<img src="./img/cart.png" alt=""></a>
+                                    </form>
+                                </div>
+                            </li>
+                            <li class="flex relative h-203px h-190px"><!--色玉06-->
+                                <div>
+                                    <img class="color_thumb" src="./img/color_06.jpg" alt="">
+                                </div>
+                                <div class="new_icon">
+                                    <img src="./img/new_icon.png" alt="">
+                                </div>
+                                <div class="flex flex-flow-col justify-between">
+                                    <div>
+                                        <h4 class="color_title text-19px md:text-15px">
+                                            06 カーキ</h4>
+                                        <p class="auto_carning mt-7px text-16px md:text-13px">
+                                            ほのかにニュアンスを感じさせる絶妙なカーキ。落ち着きとモード感のあるおしゃれな目元に。
+                                        </p>
+                                    </div>
+                                    <form method="post" name="form1" action="link.php">
+                                        <input type="hidden" name="user_name" value="01 シャンパンピーチ">
+                                        <a class="conversion_btn" href="javascript:form1.submit()">購入する<img src="./img/cart.png" alt=""></a>
+                                    </form>
+                                </div>
+                            </li>
+                            <li class="flex relative h-203px h-190px"><!--色玉07-->
+                                <div>
+                                    <img class="color_thumb" src="./img/color_07.jpg" alt="">
+                                </div>
+                                <div class="new_icon">
+                                    <img src="./img/new_icon.png" alt="">
+                                </div>
+                                <div class="flex flex-flow-col justify-between">
+                                    <div>
+                                        <h4 class="color_title text-19px md:text-15px">
+                                            07 ホワイト</h4>
+                                        <p class="auto_carning mt-7px text-16px md:text-13px">
+                                            発色をコントロールできるホワイトカラー。単色では抜けるような儚げな目元に。マスカラ下地としても〇
+                                        </p>
+                                    </div>
+                                    <form method="post" name="form1" action="link.php">
+                                        <input type="hidden" name="user_name" value="01 シャンパンピーチ">
+                                        <a class="conversion_btn" href="javascript:form1.submit()">購入する<img src="./img/cart.png" alt=""></a>
+                                    </form>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div><!--色玉の説明-->
+            </div>
+        </div>
+
+        <div class="container_lp2023ss"><!--オーガニックミネラルアクアシャドーの説明-->
+            <p class="scrollfadein text-center font-semibold text-28px mt-124px md:mt-36px mb-90px md:mb-40px md:text-18px border-bottom pb-10px">3つのポイント</p>
+            <div class="gap-y-80px flex flex-col">
+                <div>
+                    <div class="scrollfadein grid grid-cols-2 gap-40px md:gap-22px md:flex md:flex-flow-col">
+                        <p class="sp wide_carning text-19px text-center font-semibold">
+                            <span class="scrollfadein text-13px font-medium">POINT 1.</span><br>
+                            極細ブラシできれいにセパレート
+                        </p>
+                        <div>
+                            <img class="burashi-img-trim" src="./img/point01.jpg" alt="">
+                            <p class="scrollfadein text-center relative burashi-note">
+                                繊細なまつ毛をキャッチする<br class="sp">
+                                極細ブラシ
+                            </p>
+                        </div>
+                        <div>
+                            <p class="scrollfadein pc wide_carning text-24px mb-20px font-semibold">
+                                <span class="text-17px font-medium">POINT 1.</span><br>
+                                極細ブラシできれいにセパレート
+                            </p>
+                            <p class="scrollfadein text-17px md:text-16px">
+                                アクア・アクアのマスカラは繊細なまつ毛もしっかりキャッチするために、極細ブラシを採用しました。１本１本にしっかりと色付き、きれいにセパレートされたロングまつ毛を叶えます。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="scrollfadein grid grid-cols-2 gap-40px md:gap-22px md:flex md:flex-flow-col">
+                        <div>
+                            <p class="scrollfadein wide_carning text-24px mb-20px md:text-19px md:text-center font-semibold">
+                                <span class="text-17px md:text-13px font-medium">POINT 2.</span><br>
+                                ミネラル＆パールエキス<span class="font-medium">*¹</span>で<br>
+                                上品なツヤを演出
+                            </p>
+                            <p class="scrollfadein text-17px pc">
+                                健康的でツヤやかに見せるため、ミネラル＆パールエキス*¹を配合。このコンビネーションがまつ毛にハリとツヤを与え、どの角度から見てもカラーが映える上品な仕上がりを実現します。
+                            </p>
+                        </div>
+                        <div>
+                            <img src="./img/point02.jpg" alt="">
+                        </div>
+                        <p class="scrollfadein text-16px sp">
+                            それぞれのカラーに合わせてパールの大きさを変え、最も魅力的に見える組合わせを追求いたしました。<br>
+                            肌に溶け込むのに上品な存在感があり、やわらかい輝きで目元に透明感を与えます。
+                        </p>
+                    </div>
+                </div>
+                <div class="scrollfadein">
+                    <div class="flex justify-center">
+                        <p class="scrollfadein wide_carning text-24px mb-40px md:text-19px font-semibold text-center">
+                            <span class="text-17px md:text-13px font-medium">POINT 3.</span><br>
+                            まつ毛をいたわるフルーツ由来<br class="sp">美容成分を配合
+                        </p>
+                    </div>
+                    <div class="pc text-center">
+                        <div class="scrollfadein grid grid-cols-3 gap-30px mb-10px">
+                            <div>
+                                <img src="./img/p3_01.jpg" alt="">
+                                <p>ローズヒップオイル*⁴</p>
+                            </div>
+                            <div>
+                                <img src="./img/p3_02.jpg" alt="">
+                                <p>アルガンオイル*³</p>
+                            </div>
+                            <div>
+                                <img src="./img/p3_03.jpg" alt="">
+                                <p>ユズ果汁エキス*²</p>
+                            </div>
+                        </div>
+                        <div class="scrollfadein grid grid-cols-2 gap-30px" style="overflow: hidden;">
+                            <div class="flex justify-end">
+                                <div>
+                                    <img class="w-293px" src="./img/p3_04.jpg" alt="">
+                                    <p>ブドウ種子エキス*²</p>
+                                </div>
+                            </div>
+                            <div class="flex justify-start">
+                                <div>
+                                    <img class="w-293px" src="./img/p3_05.jpg" alt="">
+                                    <p>ビワ葉エキス*²</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sp text-center">
+                        <div class="scrollfadein grid grid-cols-2 gap-10px mb-10px">
+                            <div>
+                                <img src="./img/p3_01.jpg" alt="">
+                                <p class="text-13px">ローズヒップオイル*⁴</p>
+                            </div>
+                            <div>
+                                <img src="./img/p3_02.jpg" alt="">
+                                <p class="text-13px">アルガンオイル*³</p>
+                            </div>
+                            <div>
+                                <img src="./img/p3_03.jpg" alt="">
+                                <p class="text-13px">ユズ果汁エキス*²</p>
+                            </div>
+                            <div>
+                                <img src="./img/p3_04.jpg" alt="">
+                                <p class="text-13px">ブドウ種子エキス*²</p>
+                            </div>
+                            <div>
+                                <img src="./img/p3_05.jpg" alt="">
+                                <p class="text-13px">ビワ葉エキス*²</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!--オーガニックミネラルアクアシャドーの説明-->
+
+        <div class="container_lp2023ss">
+            <p class="scrollfadein text-17px mt-67px md:mt-10px mb-40px md:mb-10px md:text-16px">
+                毎日のマスカラやエクステで傷みやすいまつ毛をケアするために、ユズ果実エキス*² 、ブドウ種子エキス*² 、ビワ葉エキス*²といったフレッシュフルーツエキスやオーガニックアルガンオイル*³を配合。日中メイクをしているときも潤いを与え、いきいきとしたツヤやかなまつ毛を保ちます。
+            </p>
+            <p class="scrollfadein text-16px mb-97px md:mb-40px md:text-13px">
+                *¹加水分解コンキオリン(保湿成分) *²保湿成分 *³ アルガニアスピノサ核油(保湿成分)*⁴ カニナバラ果実油(保湿成分)
+            </p>
+            <p class="scrollfadein font-semibold text-center mt-99px pt-50px text-24px">
+                アクア・アクアのアイテムは<br class="sp">全て石けんオフできます<span class="font-medium">*</span>。<br>
+            </p>
+            <p class="scrollfadein text-16px md:text-13px text-center pb-50px mb-120px mt-20px">* マスカラとリキッドアイライナーは<br class="sp">お湯で落とせます。</p>
+        </div>
+
+        <div class="container_lp2023ss" id="conversionA"><!-- コンバージョン（クローンのオリジナル） -->
+            <div class="scrollfadein grid md:flex grid-cols-2 mb-100px gap-60px md:flex-flow-col">
+                <div>
+                    <img class="conversion_product_image" src="./img/lp01_product_image.jpg" alt="">
+                </div>
+                <div>
+                    <div class="flex flex-flow-col justify-between items-start gap-x-20px" style="height: 100%;">
+                        <h2 class="color_title border-bottom pb-10px font-semibold inline text-24px md:text-19px" style="width: 100%; white-space: nowrap;">オーガニックロングマスカラ</h2>
+                        <br class="sp">
+                        <p class="inline text-16px md:text-14px md:mb-40px">販売価格　2,750円<span class="text-10px">（税込）</span></p>
+                        <div class="irodata">
+                            <ul>
+                                <li><img src="./img/long_mascara_irodama_01.jpg" alt=""><span>01 ブラック</span></li>
+                                <li><img src="./img/long_mascara_irodama_02.jpg" alt=""><span>02 ブラウン</span></li>
+                                <li><img src="./img/long_mascara_irodama_03.jpg" alt=""><span>03 ネイビーブルー</span></li>
+                                <li><img src="./img/long_mascara_irodama_04.jpg" alt=""><span>04 オレンジブラウン</span></li>
+                                <li><img src="./img/long_mascara_irodama_05.jpg" alt=""><span>05 レッド</span></li>
+                                <li><img src="./img/long_mascara_irodama_06.jpg" alt=""><span>06 カーキ</span></li>
+                                <li><img src="./img/long_mascara_irodama_07.jpg" alt=""><span>07 ホワイト</span></li>
+                            </ul>
+                        </div>
+                        <a class="product_wtach_btn">商品の詳細を見る</a>
+                    </div>
+                </div>
+            </div>
+        </div><!-- コンバージョン（クローンのオリジナル） -->
+        
+        <!-- コンバージョンのクローン -->
+        <!-- <div class="container_lp2023ss mb-100px">
+            <div id="getCloneA" class="mb-125px"></div>
+        </div> -->
+    </div><!-- .wrapper_lp2023ss -->
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="./js/jquery.inview.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>
