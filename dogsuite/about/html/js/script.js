@@ -1,16 +1,31 @@
+$(function () {
+  console.log('go');
+  setTimeout(function () {
+    $('.logo_frame_static').addClass('isShow');
+  }, 3400);
+});
+
+// $(function () {
+//   const opVideo = $('#logo_movie01').get(0);
+//   opVideo.addEventListener('loadedmetadata', function () {
+//     const playTime = opVideo.duration * 1000 + 500;
+//     // 確認用
+//     console.log('動画の時間（長さ）： ' + opVideo.duration);
+//     console.log('動画の表示時間： ' + playTime);
+
+//     setTimeout(function () {
+//       //alert('test');
+//       $('#logo_frame_static').addClass('isShow');
+//     }, playTime);
+//   });
+// });
+
 //jQueryを使ってスクロールアニメーション01
 //const scrollNum = document.getElementById('scroll-num');
 
 window.addEventListener('scroll', function () {
-  // scrollNum.textContent = window.pageYOffset;
-  // console.log(window.pageYOffset);
-  let scrollTop = $(window).scrollTop()
-
-  let objectTop02 = $('#pc_bnr02').offset().top;
-  let objectTop03 = $('#pc_bnr03').offset().top;
-
   console.log('scroll');
-  console.log(scrollTop);
+  console.log(scrollPosition);
   //console.log(objectTop03);
 
   if (scrollTop > objectTop02) {
@@ -37,21 +52,6 @@ $('.logo_side_dog').hover(
     $(this).attr('src', '../img/logo_side_dog.png');
   }
 );
-
-$(function () {
-  const opVideo = $('#logo_movie01').get(0);
-  opVideo.addEventListener('loadedmetadata', function () {
-    const playTime = opVideo.duration * 1000 + 500;
-    // 確認用
-    console.log('動画の時間（長さ）： ' + opVideo.duration);
-    console.log('動画の表示時間： ' + playTime);
-
-    setTimeout(function () {
-      //alert('test');
-      $('#logo_frame_static').addClass('isShow');
-    }, playTime);
-  });
-});
 
 //パスワード認証 ( pass : test1234 )
 // document.body.style.display = 'none';
@@ -81,3 +81,28 @@ $(function () {
 //   }
 //   document.body.style.display = null;
 // }
+
+$(".scroll_container").scroll(function () {
+  let scrollTop = $(".scroll_container").scrollTop(); // スクロール上部の位置
+  let pc_bnr02_areaTop = $("#pc_bnr02").offset().top; // 対象エリアの上部の位置
+  let pc_bnr03_areaTop = $("#pc_bnr03").offset().top; // 対象エリアの上部の位置
+  let pc_bnr02_areaBottom = pc_bnr02_areaTop + $("#pc_bnr02").innerHeight(); // 対象エリアの下部の位置
+  let pc_bnr03_areaBottom = pc_bnr03_areaTop + $("#pc_bnr02").innerHeight(); // 対象エリアの下部の位置
+
+  if (scrollTop > pc_bnr02_areaTop && scrollTop < pc_bnr02_areaBottom) {
+    console.log('pc_bnr02-in')
+    //$("#pc_bnr02").addClass("isShow"); // スクロールが対象エリアに入った場合
+    $('#pc_bnr02 .eachTextAnime').each(function () {
+      $(this).addClass("appeartext");
+    });
+  }
+
+  if (scrollTop > pc_bnr03_areaTop && scrollTop < pc_bnr03_areaBottom) {
+    console.log('pc_bnr03-in')
+    //$("#pc_bnr02").addClass("isShow"); // スクロールが対象エリアに入った場合
+    $('#pc_bnr03 .eachTextAnime').each(function () {
+      $(this).addClass("appeartext");
+    });
+  }
+
+});

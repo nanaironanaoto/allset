@@ -5,8 +5,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- リセットCSS -->
-  <!-- <link rel="stylesheet" href="https://unpkg.com/destyle.css@3.0.2/destyle.min.css"> -->
+  <link rel="stylesheet" href="https://unpkg.com/destyle.css@3.0.2/destyle.min.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://nanaironanaoto.github.io/tailwind_mini/assets/my_tailwind_mini.css">
+  <!-- <link rel="stylesheet" type="text/css" href="http://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/move02/8-11/css/8-11.css"> -->
   <title>Document</title>
 </head>
 <body>
@@ -14,198 +16,49 @@
     <!-- pc bnr01 -->
     <div class="scroll_container_child bnr01_wrapper pc">
       <div class="bnr01_container relative">
-        <div class="video_wrapper">
+        <div class="video_wrapper video_wrapper01">
           <video loop muted autoplay playsinline>
-            <source src="movie/01.mp4" type="video/mp4">
+            <source src="./movie/01.mp4" type="video/mp4">
           </video>
         </div>
 
-        <img class="logo_frame absolute" id="logo_frame_static" src="img/pc_bnr01.jpg" alt="">
+        <img class="logo_frame absolute logo_frame_static" src="./img/pc_bnr01.jpg" alt="">
 
-        <img class="logo_frame absolute" id="logo_frame_hole" src="img/pc_bnr01.png" alt="">
+        <img class="logo_frame absolute" id="logo_frame_hole" src="./img/pc_bnr01.png" alt="">
 
-        <img src="img/logo_side_dog.png" alt="" class="logo_side_dog absolute">
+        <img src="./img/logo_side_dog.png" alt="" class="logo_side_dog absolute">
 
       </div>
     </div>
     <!-- sp bnr01 -->
     <div class="scroll_container_child bnr01_wrapper sp">
       <div class="bnr01_container">
-        <!-- <img src="img/sp_bnr01.jpg" alt=""> -->
+        <!-- <img src="./img/sp_bnr01.jpg" alt=""> -->
 
         <div class="logo_movie_wrapper">
           <div class="video_wrapper" id="video_wrapper01">
             <video class="logo_movie" id="logo_movie01" muted autoplay>
-              <source src="movie/01.mp4" type="video/mp4">
+              <source src="./movie/01.mp4" type="video/mp4">
             </video>
           </div>
         </div>
+
+        <img class="logo_frame absolute logo_frame_static" src="./img/sp_bnr01.jpg" alt="">
+
+        <img class="logo_frame absolute" id="logo_frame_hole" src="./img/sp_bnr01.png" alt="">
+
+        <img src="./img/logo_side_dog.png" alt="" class="logo_side_dog absolute">
 
       </div>
     </div>
 
     <!-- sp bnr02 -->
-    <div class="scroll_container_child wrapper sp">
-      <div class="text">
-        <p>
-          キミに喜んでもらうための<br>
-          すべてをそろえました。<br>
-          <br>
-          <br>
-          キミが帰りたくないと思ってしまうような<br>
-          いちばんの場所を目指しました。<br>
-          <br>
-          <br>
-          でも、ときどき思うのです。<br>
-          <br>
-          <br>
-          キミに何かをあげるつもりで、<br>
-          わたしはいつももらっている。<br>
-          <br>
-          <br>
-          キミがうれしいと、<br>
-          わたしもうれしいのです。<br>
-          <br>
-          <br>
-          キミにとってのいちばんが、<br>
-          わたしにとってもいちばんだから。<br>
-          <br>
-          <br>
-          キミに喜んでもらうための<br>
-          すべてをそろえました。<br>
-          <br>
-          ドッグスイート。
-        </p>
-      </div>
-      <!-- 固定/解除したい要素 -->
-      <div class="sticky">
-        <img src="img/sp_bnr02.jpg" alt="">
-      </div>
-    </div>
-
-    <!-- pc bnr02 -->
-    <div class="scroll_container_child wrapper pc" id="pc_bnr02">
-      <div class="text"></div><!-- 空スクロールする要素 -->
-      <!-- 固定/解除したい要素 -->
-      <div class="sticky">
-        <div class="vertical_textbox" id="vertical_textbox_bnr02" style="opacity:0;">
+    <div class="scroll_container_child wrapper sp" style="
+        position: relative;
+    ">
+      <div class="text_wrapper">
+        <div class="text">
           <p>
-                キミに喜んでもらうための<br>
-                すべてをそろえました。<br>
-                <br>
-                <br>
-                キミが帰りたくないと思ってしまうような<br>
-                いちばんの場所を目指しました。<br>
-                <br>
-                <br>
-                でも、ときどき思うのです。<br>
-                <br>
-                <br>
-                キミに何かをあげるつもりで、<br>
-                わたしはいつももらっている。<br>
-                <br>
-                <br>
-                キミがうれしいと、<br>
-                わたしもうれしいのです。<br>
-                <br>
-                <br>
-                キミにとってのいちばんが、<br>
-                わたしにとってもいちばんだから。<br>
-                <br>
-                <br>
-                キミに喜んでもらうための<br>
-                すべてをそろえました。<br>
-                <br>
-                ドッグスイート。
-              </p>
-        </div>
-        <div class="video_wrapper sticky_bg_movie">
-          <video loop muted autoplay playsinline>
-            <source src="movie/ds_top_pc.mp4" type="video/mp4">
-          </video>
-        </div>
-        <!-- <img src="img/pc_bnr02.jpg" alt=""> -->
-      </div>
-    </div>
-
-    <!-- 親要素 -->
-    <!-- sp bnr03 -->
-    <div class="scroll_container_child wrapper sp">
-      <div class="text">
-        <p>
-          いつからだろう。<br>
-          キミと話せるようになったのは。<br>
-          <br>
-          <br>
-          まいにち、たくさんの表情を<br>
-          見せてくれるキミ。<br>
-          <br>
-          <br>
-          中でも、わたしがいちばん好きなのは、<br>
-          おいしいの顔なのです。<br>
-          <br>
-          <br>
-          いつまでも、キミとお話したいから、<br>
-          なにより、ずっとキミのおいしいの顔を<br>
-          見ていたいから。<br>
-          <br>
-          <br>
-          健康を育み、おいしい食事を<br>
-          いっしょに食べよう。<br>
-          <br>
-          ドッグスイート ダイニング。
-        </p>
-      </div>
-      <!-- 固定/解除したい要素 -->
-      <div class="sticky">
-        <img src="img/pc_bnr03.jpg" alt="" class="pc">
-        <img src="img/sp_bnr03.jpg" alt="" class="sp">
-      </div>
-    </div>
-
-    <!-- pc bnr03 -->
-    <div class="scroll_container_child wrapper pc" id="pc_bnr03">
-      <div class="text"></div><!-- 空スクロールする要素 -->
-      <!-- 固定/解除したい要素 -->
-      <div class="sticky">
-        <div class="vertical_textbox" id="vertical_textbox_bnr03" style="opacity:0;">
-          <p>
-            いつからだろう。<br>
-            キミと話せるようになったのは。<br>
-            <br>
-            <br>
-            まいにち、たくさんの表情を<br>
-            見せてくれるキミ。<br>
-            <br>
-            <br>
-            中でも、わたしがいちばん好きなのは、<br>
-            おいしいの顔なのです。<br>
-            <br>
-            <br>
-            いつまでも、キミとお話したいから、<br>
-            なにより、ずっとキミのおいしいの顔を<br>
-            見ていたいから。<br>
-            <br>
-            <br>
-            健康を育み、おいしい食事を<br>
-            いっしょに食べよう。<br>
-            <br>
-            ドッグスイート ダイニング。
-          </p>
-        </div>
-        <div class="video_wrapper sticky_bg_movie">
-          <video loop muted autoplay playsinline>
-            <source src="movie/DS_kitchen_pc.mp4" type="video/mp4">
-          </video>
-        </div>
-        <!-- <img src="img/pc_bnr03.jpg" alt=""> -->
-      </div>
-    </div>
-
-    <!-- sp bnr03 -->
-    <div class="scroll_container_child wrapper sp">
-      <div class="text">
-        <p>
             キミに喜んでもらうための<br>
             すべてをそろえました。<br>
             <br>
@@ -232,61 +85,242 @@
             キミに喜んでもらうための<br>
             すべてをそろえました。<br>
             <br>
-            ドッグスイート。
+            ドッグスイート。<br>
+            <br><br>
           </p>
-      </div>
-      <!-- 固定/解除したい要素 -->
-      <div class="sticky">
-        <img src="img/sp_bnr04.jpg" alt="">
-      </div>
-    </div>
-
-    <!-- pc bnr03 -->
-    <div class="scroll_container_child wrapper pc">
-      <div class="text">
-        <p>
-              キミに喜んでもらうための<br>
-              すべてをそろえました。<br>
-              <br>
-              <br>
-              キミが帰りたくないと思ってしまうような<br>
-              いちばんの場所を目指しました。<br>
-              <br>
-              <br>
-              でも、ときどき思うのです。<br>
-              <br>
-              <br>
-              キミに何かをあげるつもりで、<br>
-              わたしはいつももらっている。<br>
-              <br>
-              <br>
-              キミがうれしいと、<br>
-              わたしもうれしいのです。<br>
-              <br>
-              <br>
-              キミにとってのいちばんが、<br>
-              わたしにとってもいちばんだから。<br>
-              <br>
-              <br>
-              キミに喜んでもらうための<br>
-              すべてをそろえました。<br>
-              <br>
-              ドッグスイート。
-            </p>
+          <img src="./img/dogsuite_sq_logo.jpg" alt="" style="
+                                object-fit: contain;
+                            ">
+        </div>
       </div>
       <!-- 固定/解除したい要素 -->
       <div class="sticky">
         <div class="video_wrapper sticky_bg_movie">
-          <video loop muted autoplay playsinline>
-            <source src="movie/ds_sen_pc.mp4" type="video/mp4">
+          <video class="bg_fullscreen" loop muted autoplay playsinline>
+            <source src="./movie/ds_top_sp.mp4" type="video/mp4">
           </video>
         </div>
-        <!-- <img src="img/pc_bnr04.jpg" alt=""> -->
+        <!-- <img src="./img/sp_bnr02.jpg" alt=""> -->
       </div>
     </div>
+
+    <!-- pc bnr02 -->
+    <div class="scroll_container_child wrapper pc" id="pc_bnr02">
+      <div class="text"></div><!-- 空スクロールする要素 -->
+      <!-- 固定/解除したい要素 -->
+      <div class="sticky">
+        <div class="vertical_textbox" id="vertical_textbox_bnr02">
+          <p class="eachTextAnime">
+            <span style="animation-delay: 1s;">キミに喜んでもらうための</span><br>
+            <span style="animation-delay: 1.1s;">すべてをそろえました。</span><br>
+            <br>
+            <span style="animation-delay: 1.2s;">キミが帰りたくないと思ってしまうような</span><br>
+            <span style="animation-delay: 1.3s;">いちばんの場所を目指しました。</span><br>
+            <br>
+            <span style="animation-delay: 1.4s;">でも、ときどき思うのです。</span><br>
+            <br>
+            <span style="animation-delay: 1.5s;">キミに何かをあげるつもりで、</span><br>
+            <span style="animation-delay: 1.6s;">わたしはいつももらっている。</span><br>
+            <br>
+            <span style="animation-delay: 1.7s;">キミがうれしいと、</span><br>
+            <span style="animation-delay: 1.8s;">わたしもうれしいのです。</span><br>
+            <br>
+            <span style="animation-delay: 1.9s;">キミにとってのいちばんが、</span><br>
+            <span style="animation-delay: 2.0s;">わたしにとってもいちばんだから。</span><br>
+            <br>
+            <span style="animation-delay: 2.1s;">キミに喜んでもらうための</span><br>
+            <span style="animation-delay: 2.2s;">すべてをそろえました。</span><br>
+            <br>
+            <span style="animation-delay: 2.3s;">ドッグスイート。</span><br>
+            <br>
+            <span style="animation-delay: 2.8s; top: 160px; position: relative;">
+            <img style="object-fit: contain; width: 110px;" src="./img/dogsuite_sq_logo.jpg" alt=""></span>
+          </p>
+        </div>
+        <div class="video_wrapper sticky_bg_movie">
+          <video class="bg_fullscreen" loop muted autoplay playsinline>
+            <source src="./movie/ds_top_pc.mp4" type="video/mp4">
+          </video>
+        </div>
+        <!-- <img src="./img/pc_bnr02.jpg" alt=""> -->
+      </div>
+    </div>
+
+    <!-- 親要素 -->
+    <!-- sp bnr03 -->
+    <div class="scroll_container_child wrapper sp" style="
+        position: relative;
+    ">
+      <div class="text_wrapper">
+        <div class="text" style="color:#fff;">
+          <p>
+            いつからだろう。<br>
+            キミと話せるようになったのは。<br>
+            <br>
+            <br>
+            まいにち、たくさんの表情を<br>
+            見せてくれるキミ。<br>
+            <br>
+            <br>
+            中でも、わたしがいちばん好きなのは、<br>
+            おいしいの顔なのです。<br>
+            <br>
+            <br>
+            いつまでも、キミとお話したいから、<br>
+            なにより、ずっとキミのおいしいの顔を<br>
+            見ていたいから。<br>
+            <br>
+            <br>
+            健康を育み、おいしい食事を<br>
+            いっしょに食べよう。<br>
+            <br>
+            ドッグスイート ダイニング。<br>
+            <br><br>
+          </p>
+          <img src="./img/dogsuite_sq_logo03.jpg" alt="" style="
+                                object-fit: contain;
+                            ">
+        </div>
+      </div>
+      <!-- 固定/解除したい要素 -->
+      <div class="sticky">
+        <div class="video_wrapper sticky_bg_movie">
+          <video class="bg_fullscreen" loop muted autoplay playsinline>
+            <source src="./movie/ds_kitchen_sp.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+
+    <!-- pc bnr03 -->
+    <div class="scroll_container_child wrapper pc" id="pc_bnr03">
+      <div class="text"></div><!-- 空スクロールする要素 -->
+      <!-- 固定/解除したい要素 -->
+      <div class="sticky">
+        <div class="vertical_textbox" id="vertical_textbox_bnr03">
+          <p class="eachTextAnime">
+            <span style="animation-delay: 1s;">いつからだろう。</span><br>
+            <span style="animation-delay: 1.1s;">キミと話せるようになったのは。</span><br>
+            <br>
+            <span style="animation-delay: 1.2s;">まいにち、たくさんの表情を</span><br>
+            <span style="animation-delay: 1.3s;"> 見せてくれるキミ。</span><br>
+            <br>
+            <span style="animation-delay: 1.4s;">中でも、わたしがいちばん好きなのは、</span><br>
+            <span style="animation-delay: 1.5s;">おいしいの顔なのです。</span><br>
+            <br>
+            <span style="animation-delay: 1.6s;">いつまでも、キミとお話したいから、</span><br>
+            <span style="animation-delay: 1.7s;">なにより、ずっとキミのおいしいの顔を</span><br>
+            <span style="animation-delay: 1.8s;">見ていたいから。</span><br>
+            <br>
+            <span style="animation-delay: 1.9s;">健康を育み、おいしい食事を</span><br>
+            <span style="animation-delay: 2s;">いっしょに食べよう。</span><br>
+            <br>
+            <span style="animation-delay: 2.1s;">ドッグスイート ダイニング。</span><br>
+            <br>
+            <br>
+            <span style="animation-delay: 2.6s; top: 160px; position: relative;"><img style="object-fit: contain; width: 110px" src="./img/dogsuite_sq_logo03.jpg" alt=""></span>
+          </p>
+        </div>
+        <div class="video_wrapper sticky_bg_movie">
+          <video class="bg_fullscreen" loop muted autoplay playsinline>
+            <source src="./movie/DS_kitchen_pc.mp4" type="video/mp4">
+          </video>
+        </div>
+        <!-- <img src="./img/pc_bnr03.jpg" alt=""> -->
+      </div>
+    </div>
+
+
+
+
+
+
+
+    <!-- sp bnr04 -->
+    <div class="scroll_container_child wrapper sp" style="
+        position: relative;
+    ">
+      <div class="text_wrapper">
+        <div class="text_sen">
+          <p>わたしたちに、<br>
+            まいにちの食べ物の大切さを教えてくれたのが<br>“千(せん)”です。</p>
+          <br>
+          <br>
+          <br>
+          <figure class="figure01"><img src="./img/sen_text01.jpg" alt=""></figure>
+          <p>千は生後３ヶ月の頃から耳に疾患があり、耳の中は茶色くただれ、異臭を放っていました。病院に行き、薬を服用し、症状を落ち着かせてはいたものの完治することはなく、成長とともに、中耳炎、外耳炎、膿皮症、涙やけ、体全体のかゆみ、突然の下痢など、疾患はさらに増えていきました。<br>消毒、耳毛抜きなど１日おきの通院が半年ほど続け、ステロイドも服用。一旦は落ち着くものの、投薬をやめれば発症の繰り返しでした。</p>
+          <br>
+          <br>
+          <br>
+          <figure class="figure02"><img src="./img/sen_text02.jpg" alt=""></figure>
+          <p>そこで、わたしたちは、フード、サプリメント、おやつの見直しを行いました。肉、魚、野菜選びからはじまり、調理の仕方、組み合わせなど、試行錯誤を繰り返します。</p>
+          <p class="float_clear">ボーンブロスも取り入れ、手作り食にして半年が経った頃、千の症状は大きな改善を見せたのです。まいにちの食べ物が健康に大きく影響していることを実感した瞬間でした。</p>
+          <br>
+          <br>
+          <br>
+          <figure class="figure01"><img src="./img/sen_text03.jpg" alt=""></figure>
+          <p>いまも、千は元気にわたしたちと暮らしています。ドッグスイートのシンボルドッグとして。わたしたちの大切な千にぜひ会いに来ていただけたらうれしいです。</p>
+        </div>
+      </div>
+      <!-- 固定/解除したい要素 -->
+      <div class="sticky">
+        <div><img src="./img/sen_bg_sp.jpg" style="position: absolute;
+          z-index: 1;
+          left: 0;
+          top: 0;"></div>
+        <div><img src="./img/sen_bg_sp.jpg" style="position: absolute;
+          z-index: 1;
+          left: 0;
+          bottom: 0;"></div>
+        <div class="sen_name"><img src="./img/sen_name.png" alt=""></div>
+        <div class="video_wrapper sticky_bg_movie" id="video_sen_sp">
+          <video class="bg_fullscreen" loop muted autoplay playsinline>
+            <source src="./movie/ds_sen_sp.mp4" type="video/mp4">
+          </video>
+        </div>
+        <!-- <img src="./img/sp_bnr04.jpg" alt=""> -->
+      </div>
+    </div>
+
+    <!-- pc bnr04 -->
+    <div class="scroll_container_child wrapper pc" id="text_sen_wrapper" style="position: relative;">
+      <div class="text_sen">
+        <p>わたしたちに、<br>
+          まいにちの食べ物の大切さを教えてくれたのが“千(せん)”です。</p>
+        <br>
+        <br>
+        <br>
+        <figure class="figure01"><img src="./img/sen_text01.jpg" alt=""></figure>
+        <p>千は生後３ヶ月の頃から耳に疾患があり、<br>耳の中は茶色くただれ、異臭を放っていました。病院に行き、薬を服用し、症状を落ち着かせてはいたものの完治することはなく、</p>
+        <p class="float_clear">成長とともに、中耳炎、外耳炎、膿皮症、涙やけ、体全体のかゆみ、突然の下痢など、疾患はさらに増えていきました。消毒、耳毛抜きなど１日おきの通院が半年ほど続け、ステロイドも服用。一旦は落ち着くものの、投薬をやめれば発症の繰り返しでした。</p>
+        <br>
+        <br>
+        <br>
+        <figure class="figure02"><img src="./img/sen_text02.jpg" alt=""></figure>
+        <p>そこで、わたしたちは、フード、サプリメント、おやつの見直しを行いました。肉、魚、野菜選びからはじまり、調理の仕方、組み合わせなど、試行錯誤を繰り返します。</p>
+        <p class="float_clear">ボーンブロスも取り入れ、手作り食にして半年が経った頃、千の症状は大きな改善を見せたのです。まいにちの食べ物が健康に大きく影響していることを実感した瞬間でした。</p>
+        <br>
+        <br>
+        <br>
+        <figure class="figure01"><img src="./img/sen_text03.jpg" alt=""></figure>
+        <p>いまも、千は元気にわたしたちと暮らしています。ドッグスイートのシンボルドッグとして。わたしたちの大切な千にぜひ会いに来ていただけたらうれしいです。</p>
+      </div>
+      <!-- 固定/解除したい要素 -->
+      <div class="sticky video_sen_sp_bg">
+        <div class="sen_name"><img src="./img/sen_name.png" alt=""></div>
+        <div class="video_wrapper sticky_bg_movie" id="video_sen_pc">
+          <video class="bg_fullscreen" loop muted autoplay playsinline>
+            <source src="./movie/ds_sen_pc.mp4" type="video/mp4">
+          </video>
+        </div>
+        <!-- <img src="./img/pc_bnr04.jpg" alt=""> -->
+      </div>
+    </div>
+
   </div>
 
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script type="text/javascript" src="js/script.js"></script>
+  <!-- <script src="http://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/move02/8-11/js/8-11.js"></script> -->
 </body>
 </html>
