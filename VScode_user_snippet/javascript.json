@@ -1,0 +1,8 @@
+{
+  "react section prototype": {
+    "prefix": "react section",
+    "body": [
+      "//import [インポートしたい要素名] from \"../[インポートしたい要素のファイル名(拡張子まで)]\"; \n const [このセクション名] = () => {\n return(\n <div> $0 </div>\n );\n };\n \n export default [このセクション名];"
+    ]
+  }
+}

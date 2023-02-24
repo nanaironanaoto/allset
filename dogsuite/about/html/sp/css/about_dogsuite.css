@@ -1,0 +1,341 @@
+body {
+  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+}
+
+.scroll_container {
+  width: 100%;
+  height: 100vh;
+  scroll-snap-type: y mandatory;
+  overflow: scroll;
+}
+
+.scroll_container_child {
+  height: 100vh;
+  scroll-snap-align: start;
+}
+
+img {
+  width: 100%;
+}
+
+video {
+  width: 100%;
+}
+
+.wrapper {
+  background-color: #ccc;
+  /* padding: 300px; */
+  height: 200vh;
+  width: 100vw;
+}
+
+.text {
+  padding: 10%;
+  position: absolute;
+  z-index: 1;
+}
+
+.text_sen {
+  width: 472px;
+  height: 500px;
+  position: absolute;
+  top: 168px;
+  left: calc(50vw - 472px);
+  z-index: 1;
+  padding-top: 410px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.text_sen p {
+  font-feature-settings: "palt";
+  letter-spacing: 1.5px;
+  line-height: 3;
+  margin-top: -9px;
+  margin-bottom: 0;
+}
+
+.text_sen figure.figure01 {
+  float: left;
+  margin: 0 15px 15px 0;
+  width: 150px;
+}
+
+.text_sen figure.figure02 {
+  float: right;
+  margin: 0 0 15px 15px;
+  width: 150px;
+}
+
+.sen_name {
+  position: absolute;
+  z-index: 1;
+  left: calc(50vw - 536px / 2);
+  top: 20%;
+}
+
+#text_sen_wrapper {
+  height: 300vh;
+}
+
+.float_clear {
+  clear: both;
+}
+
+.sticky {
+  background: url(../img/sen_bg_pc.jpg);
+  position: -webkit-sticky;
+  /* Safariに対応する */
+  position: sticky;
+  /* 要素を固定/解除する */
+  top: 0;
+  /* 縦方向の閾値 */
+  left: 0;
+  /* 横方向の閾値 */
+}
+
+.sticky img,
+.sticky .sticky_bg_movie {
+  width: 100%;
+}
+
+.bg_fullscreen {
+  height: 100vh;
+  width: auto;
+}
+
+.bnr01_wrapper {
+  background: #014b97;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.logo_frame_static {
+  opacity: 0;
+}
+
+.logo_frame {
+  object-fit: cover;
+  height: 100vh;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.logo_side_dog {
+  width: 19vw;
+  z-index: 1;
+  position: absolute;
+  bottom: -100px;
+  right: 100px;
+}
+
+.video_wrapper {
+  display: flex;
+  justify-content: center;
+  width: 500px;
+  position: relative;
+}
+
+.video_wrapper01 {
+  top: -160px;
+}
+
+.video_wrapper .logo_movie {
+  width: 50%;
+}
+
+.bnr01_wrapper>.bnr01_container {
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.logo_frame_static.isShow {
+  opacity: 1;
+  transition: 300ms;
+}
+
+/*縦書きテキスト指定*/
+.vertical_textbox_wrapper {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.vertical_textbox {
+  position: absolute;
+  top: 40px;
+  z-index: 1;
+  line-height: 2.6;
+}
+
+.vertical_textbox p {
+  writing-mode: vertical-rl;
+  font-weight: 600;
+}
+
+.vertical_textbox_wrapper_bg {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.vertical_textbox_wrapper_bg img {
+  object-fit: cover;
+  object-position: bottom right;
+  height: 100vh;
+}
+
+#vertical_textbox_bnr02 {
+  display: flex;
+  align-items: end;
+  left: calc(50vw - 1077px / 2);
+  font-size: 15px;
+}
+
+#vertical_textbox_bnr03 {
+  display: flex;
+  align-items: end;
+  color: #fff;
+  left: calc(50vw - 1082px / 2);
+}
+
+#video_sen_pc {
+  max-width: 1186px;
+  height: 100vh;
+  margin: auto;
+}
+
+.video_sen_pc_bg {
+  background: url(../img/sen_bg_pc.jpg);
+}
+
+/*========= 1文字ずつ出現させるためのCSS ===============*/
+
+.eachTextAnime span {
+  opacity: 0;
+}
+
+.eachTextAnime.appeartext span {
+  animation: text_anime_on 1s ease-out forwards;
+}
+
+@keyframes text_anime_on {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .pc {
+    display: none;
+  }
+
+  .text_wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    overflow: scroll;
+    line-height: 2.5;
+  }
+
+  .text {
+    font-size: 12px;
+    padding: 710px 10% 20%;
+    font-weight: 600;
+  }
+
+  .text_wrapper .text img {
+    width: 100px;
+  }
+
+  .bg_fullscreen {
+    width: 100%;
+    height: auto;
+  }
+
+  .wrapper {
+    height: 100vh;
+  }
+
+  .logo_frame {
+    object-fit: cover;
+    object-position: bottom;
+    height: 440px;
+    width: 100%;
+  }
+
+  .bnr01_wrapper {
+    height: 50vh;
+  }
+
+  .logo_side_dog {
+    width: 49vw;
+    bottom: -110px;
+    right: 10px;
+  }
+
+  .sen_name {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 130px;
+    padding: 6%;
+  }
+
+  .text_sen {
+    width: 100%;
+    height: 1500px;
+    position: absolute;
+    top: 168px;
+    left: 0;
+    z-index: 1;
+    padding-top: 410px;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 6%;
+  }
+
+  .text_sen figure.figure01 {
+    float: left;
+    margin: 0 15px 10px 0;
+    width: 25%;
+  }
+
+  .text_sen figure.figure02 {
+    float: right;
+    margin: 0 0 10px 15px;
+    width: 25%;
+  }
+
+  .text_sen figure.figure03 {
+    float: left;
+    margin: 0 15px 10px 0;
+    width: 25%;
+  }
+
+  .text_sen p {
+    font-feature-settings: "palt";
+    letter-spacing: 1.5px;
+    line-height: 3;
+    margin-top: -2px;
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .sp {
+    display: none;
+  }
+}

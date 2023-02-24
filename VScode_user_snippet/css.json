@@ -1,0 +1,52 @@
+{
+  "@media screen and (max-width: 767px)": {
+    "prefix": "@m",
+    "body": [
+      "@media screen and (max-width: 767px) {",
+      "}"
+    ]
+  },
+  "@media screen and (min-width: 768px)": {
+    "prefix": "@m",
+    "body": [
+      "@media screen and (min-width: 768px) {",
+      "}"
+    ]
+  },
+  "!important;": {
+    "prefix": "!i|!",
+    "body": [
+      "!important;"
+    ]
+  },
+  "grid-template-columns(幅フレキシブル)": {
+    "prefix": "grid-t|grid",
+    "body": [
+      "grid-template-columns: repeat(3, auto);"
+    ]
+  },
+  "grid-template-columns(幅均等割り)": {
+    "prefix": "grid-t|grid",
+    "body": [
+      "grid-template-columns: repeat(3, 1fr);"
+    ]
+  },
+  "grid-template-columns(指定した幅で繰り返す)": {
+    "prefix": "grid-t|grid",
+    "body": [
+      "grid-template-columns : repeat(auto-fill, 30px);"
+    ]
+  },
+  "grid-column(1行の中で特定のカラムを結合)": {
+    "prefix": "grid-c|grid",
+    "body": [
+      "grid-column: 1 / span 2;"
+    ]
+  },
+  "grid-area(2行 1列から開始し、2行 3列にまたがる仮想ボックスを作成する例)": {
+    "prefix": "grid-a|grid",
+    "body": [
+      "  grid-area: 2 / 1 / span 2 / span 3;"
+    ]
+  }
+}

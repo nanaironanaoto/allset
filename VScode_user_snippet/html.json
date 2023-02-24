@@ -1,0 +1,8 @@
+{
+  "htmlひな型(カスタマイズ)": {
+    "prefix": "!",
+    "body": [
+      "<!DOCTYPE html>\n<html lang=\"ja\">\n<head>\n<meta charset=\"UTF-8\">\n<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n<meta name=\"viewport\"content=\"width=device-width, initial-scale=1\">\n<meta name=\"description\" content=\"検索結果でサイト名の下に表示される「サイトの説明文」\">\n<link rel=\"apple-touch-icon\" sizes=\"180x180\" href=\"アップルタッチ用のファビコン(相対パスOK）.png\">\n<link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"32サイズのファビコン画像(相対パスOK）.png\">\n<link rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"16サイズのファビコン画像(相対パスOK）.png\">\n<link rel=\"manifest\" href=\"PWA化のためのマニフェストファイル.webmanifest\">\n<meta name=\"msapplication-TileColor\" content=\"Windowsピン留めのテーマカラーを設定→#ffffff\">\n<meta name=\"theme-color\" content=\"theme-colorを設定→#ffffff\">\n<meta name=\"msapplication-TileImage\" content=\"Windowsピン留め時の画像(絶対パス）.png\" />\n<meta property=\"og:description\" content=\"SNSでシェアされたときに表示するサイトの説明文\">\n<meta property=\"og:title\" content=\"SNSでシェアされたときに表示するサイトのタイトル\">\n<meta property=\"og:image\" content=\"SNSでシェアされたときに表示する画像※かならず絶対パスを記載（相対パス不可）https://....../img/icons/logo.png\">\n<meta property=\"og:image:width\" content=\"画像の幅px\">\n<meta property=\"og:image:height\" content=\"画像の高さpx\">\n<meta property=\"og:type\" content=\"urlがトップページの場合→website、トップページ以外の場合→article\">\n<meta property=\"og:url\" content=\"https://........\">\n<title>${1:Document}</title>\n<link rel=\"stylesheet\" href=\"${2:css/style.css}\">\n<link rel=\"stylesheet\" href=\"https://nanaironanaoto.github.io/tailwind_mini/assets/my_tailwind_mini_minified.css\">\n</head>\n<body>\n    $0\n<script src=\"https: //ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js\"></script>\n</body>\n</html>"
+    ]
+  }
+}
