@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>test</title>
+    <style>
+        @-webkit-keyframes elementInserted {
+          0% {opacity: 0;}
+          100% {opacity: 1;}
+        }
+        .sc-bAeIUo {
+          -webkit-animation: elementInserted 0.001s 1;
+        }
+    </style>       
+  </head>
+  <body>
+    <input type="text" id="text" class="sc-bAeIUo" name="text" value="" onInput="textCheck(this)" required maxlength="10" size="10">
+    <script type="text/javascript">
+        document.addEventListener('webkitAnimationStart', function(event){
+        if (event.animationName == 'elementInserted') {
+            // ここに処理を記述
+            function textCheck($this)
+            {
+                let str=$this.value;
+                // 文頭から文末まで全て0-9かチェック
+                if(!str.match(/^[0-9]+$/)){
+                // そうでなければ入力文字を空白に変換
+                str="";
+                }
+                $this.value=str;
+            }
+            
+            function buttonClick(){
+                // 入力値取得
+                let input = document.getElementByClassName("sc-bAeIUo").value;
+            }
+        }
+        }, true);
+    </script>
+  </body>
+</html>

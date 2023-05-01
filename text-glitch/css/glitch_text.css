@@ -1,0 +1,463 @@
+@charset "UTF-8";
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  background: #000;
+}
+
+/* ====================================
+  テキストアニメーション No1
+==================================== */
+.glitch-text {
+  width: 100%;
+}
+
+.glitch {
+  position: relative;
+  color: #fff;
+  font-weight: 700;
+  font-size: 45px;
+  font-style: italic;
+  margin: 0;
+  padding: 0 10px;
+  letter-spacing: 2px;
+}
+
+/* グリッチの動き */
+.glitch-text .glitch::before,
+.glitch-text .glitch::after {
+  display: inline-block;
+  box-sizing: border-box;
+  z-index: 2;
+  padding: 0 10px;
+  color: white;
+  content: attr(data-text);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: black;
+  overflow: hidden;
+  top: 0;
+}
+
+.glitch-text .glitch::before {
+  left: -2px;
+  text-shadow: -4px 0 red;
+  animation: glitch-1 2s linear infinite reverse;
+}
+
+.glitch-text .glitch::after {
+  left: -4px;
+  text-shadow: -4px 0 yellow;
+  animation: glitch-2 2s linear infinite reverse;
+}
+
+@keyframes glitch-1 {
+  0% {
+    clip: rect(132px, auto, 101px, 30px);
+  }
+  5% {
+    clip: rect(17px, auto, 94px, 30px);
+  }
+  10% {
+    clip: rect(40px, auto, 66px, 30px);
+  }
+  15% {
+    clip: rect(87px, auto, 82px, 30px);
+  }
+  20% {
+    clip: rect(137px, auto, 61px, 30px);
+  }
+  25% {
+    clip: rect(34px, auto, 14px, 30px);
+  }
+  30% {
+    clip: rect(133px, auto, 74px, 30px);
+  }
+  35% {
+    clip: rect(76px, auto, 107px, 30px);
+  }
+  40% {
+    clip: rect(59px, auto, 130px, 30px);
+  }
+  45% {
+    clip: rect(29px, auto, 84px, 30px);
+  }
+  50% {
+    clip: rect(22px, auto, 67px, 30px);
+  }
+  55% {
+    clip: rect(67px, auto, 62px, 30px);
+  }
+  60% {
+    clip: rect(10px, auto, 105px, 30px);
+  }
+  65% {
+    clip: rect(78px, auto, 115px, 30px);
+  }
+  70% {
+    clip: rect(105px, auto, 13px, 30px);
+  }
+  75% {
+    clip: rect(15px, auto, 75px, 30px);
+  }
+  80% {
+    clip: rect(66px, auto, 39px, 30px);
+  }
+  85% {
+    clip: rect(133px, auto, 73px, 30px);
+  }
+  90% {
+    clip: rect(36px, auto, 128px, 30px);
+  }
+  95% {
+    clip: rect(68px, auto, 103px, 30px);
+  }
+  100% {
+    clip: rect(14px, auto, 100px, 30px);
+  }
+}
+@keyframes glitch-2 {
+  0% {
+    clip: rect(129px, auto, 36px, 30px);
+  }
+  5% {
+    clip: rect(36px, auto, 4px, 30px);
+  }
+  10% {
+    clip: rect(85px, auto, 66px, 30px);
+  }
+  15% {
+    clip: rect(91px, auto, 91px, 30px);
+  }
+  20% {
+    clip: rect(148px, auto, 138px, 30px);
+  }
+  25% {
+    clip: rect(38px, auto, 122px, 30px);
+  }
+  30% {
+    clip: rect(69px, auto, 54px, 30px);
+  }
+  35% {
+    clip: rect(98px, auto, 71px, 30px);
+  }
+  40% {
+    clip: rect(146px, auto, 34px, 30px);
+  }
+  45% {
+    clip: rect(134px, auto, 43px, 30px);
+  }
+  50% {
+    clip: rect(102px, auto, 80px, 30px);
+  }
+  55% {
+    clip: rect(119px, auto, 44px, 30px);
+  }
+  60% {
+    clip: rect(106px, auto, 99px, 30px);
+  }
+  65% {
+    clip: rect(141px, auto, 74px, 30px);
+  }
+  70% {
+    clip: rect(20px, auto, 78px, 30px);
+  }
+  75% {
+    clip: rect(133px, auto, 79px, 30px);
+  }
+  80% {
+    clip: rect(78px, auto, 52px, 30px);
+  }
+  85% {
+    clip: rect(35px, auto, 39px, 30px);
+  }
+  90% {
+    clip: rect(67px, auto, 70px, 30px);
+  }
+  95% {
+    clip: rect(71px, auto, 103px, 30px);
+  }
+  100% {
+    clip: rect(83px, auto, 40px, 30px);
+  }
+}
+/* ====================================
+  テキストアニメーション No2：ストロボ風
+==================================== */
+.glitch-strobo {
+  animation: glitch-skew 4s cubic-bezier(0.25, 0.46, 0.45, 0.94) 4s infinite;
+  font-size: 60px;
+  font-style: italic;
+  font-weight: 900;
+  line-height: 1;
+  position: relative;
+  transform-origin: center top;
+}
+.glitch-strobo .glitch__main {
+  color: #FFF;
+}
+.glitch-strobo .glitch__color {
+  height: 100%;
+  left: 0;
+  opacity: 0.8;
+  position: absolute;
+  top: 0;
+  transform-origin: center center;
+  width: 100%;
+  z-index: -1;
+}
+.glitch-strobo .glitch__color.glitch__color--color1 {
+  animation: glitch 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+  color: red;
+}
+.glitch-strobo .glitch__color.glitch__color--color2 {
+  animation: glitch 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite reverse;
+  color: blue;
+}
+.glitch-strobo .glitch__color.glitch__color--color3 {
+  animation: glitch 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 100ms infinite;
+  color: #00FF0B;
+}
+.glitch-strobo .glitch__line {
+  animation: glitch-line 2s linear infinite;
+  background: #000;
+  content: "";
+  height: 1px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+.glitch-strobo .glitch__line.glitch__line--first {
+  animation: glitch-line 2s linear infinite;
+}
+.glitch-strobo .glitch__line.glitch__line--second {
+  animation: glitch-line 1s linear 1s infinite;
+}
+
+@keyframes glitch {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-4px, 4px);
+  }
+  40% {
+    transform: translate(-4px, -4px);
+  }
+  60% {
+    transform: translate(4px, 4px);
+  }
+  80% {
+    transform: translate(4px, -4px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+@keyframes glitch-skew {
+  0% {
+    transform: skew(0deg, 0deg);
+  }
+  48% {
+    transform: skew(0deg, 0deg);
+    filter: blur(0);
+  }
+  50% {
+    transform: skew(-20deg, 0deg);
+    filter: blur(4px);
+  }
+  52% {
+    transform: skew(20deg, 0deg);
+  }
+  54% {
+    transform: skew(0deg, 0deg);
+    filter: blur(0);
+  }
+  100% {
+    transform: skew(0deg, 0deg);
+  }
+}
+@keyframes glitch-line {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 100%;
+  }
+}
+/* ====================================
+   news
+==================================== */
+.news {
+  padding: 15rem 0 2rem;
+}
+.news .news_wrap {
+  background: #fff;
+  max-width: 800px;
+  margin: 3rem auto 0;
+  padding: 1.5rem 3rem;
+}
+.news .news_wrap .news_item-body {
+  padding: 0;
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px solid #000;
+  padding-bottom: 1rem;
+}
+.list:not(:first-child) {
+  margin-top: 2rem;
+}
+.list:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+.list .list_info {
+  display: flex;
+  align-items: center;
+  flex: 0 0 26%;
+}
+.list .list_info .list_date {
+  font-size: 1.4rem;
+}
+.list .list_info .list_label {
+  background: blue;
+  border-radius: 3rem;
+  min-width: 50px;
+  text-align: center;
+  font-size: 1.2rem;
+  color: rgb(162, 188, 229);
+  margin-left: 1rem;
+  padding: 0.3rem 1rem;
+}
+.list .list_text {
+  position: relative;
+  flex: 0 1 74%;
+  font-size: 1.4rem;
+  padding-right: 2rem;
+}
+.list .list_text::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  right: 0;
+  width: 0.7rem;
+  height: 0.7rem;
+  border-top: 2px solid #000;
+  border-right: 2px solid #000;
+  transform: rotate(45deg);
+}
+
+/* ====================================
+   contact
+==================================== */
+.contact_wrap {
+  background: #fff;
+  max-width: 800px;
+  margin: 3rem auto 6rem;
+  padding: 1.5rem 3rem;
+}
+
+.form_group {
+  display: flex;
+  width: 100%;
+}
+.form_group:not(:first-of-type) {
+  margin-top: 2rem;
+}
+
+.form_group label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 0 0 28%;
+  margin-right: 2.8rem;
+  padding-top: 1.2rem;
+}
+
+.form_group label.required {
+  position: relative;
+  align-items: baseline;
+}
+.form_group label.required::after {
+  background: #CC0000;
+  border-radius: 0.3rem;
+  text-align: center;
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 0.2rem 1rem;
+  margin-left: 1.2rem;
+  content: "必須";
+}
+
+.form_group input,
+.form_group textarea {
+  flex: 0 1 74%;
+  width: 100%;
+  border: 1px solid #707070;
+  border-radius: 0.5rem;
+  font-size: 1.4rem;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+  margin-top: 1rem;
+  padding: 0.7rem 1rem 0.5rem;
+}
+
+.form_group input[type=radio] {
+  display: none;
+}
+
+.form_group .radio {
+  display: flex;
+  align-items: center;
+}
+
+.form_group .radio label {
+  flex: auto;
+}
+
+.form_group .radio span {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.form_group .radio span::before {
+  content: "";
+  display: block;
+  border-radius: 50%;
+  border: 4px solid #707070;
+  width: 1.6rem;
+  height: 1.6rem;
+  margin-top: -0.3rem;
+  margin-right: 0.5rem;
+}
+
+.form_group .radio span::after {
+  position: absolute;
+  content: "";
+  display: block;
+  left: 0;
+  border-radius: 50%;
+  width: 1.6rem;
+  height: 1.6rem;
+  margin-top: -0.3rem;
+}
+
+.form_group input[type=radio]:checked + span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  display: block;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  background-color: #707070;
+}/*# sourceMappingURL=style.css.map */
