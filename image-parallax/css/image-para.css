@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+
+/* 動作確認用余白 */
+.spacer {
+  width: 100%;
+  height: 100vh;
+}
+
+.parallax-wrap {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+/*parallaxの表示エリア*/
+.parallax-content {
+  background: no-repeat center/cover;
+  background-size: 0;
+  width: 100%;
+  min-height: 440px;
+  position: relative;
+  overflow: hidden;
+  z-index: -1;
+  transition: transform 0.8s ease-out;
+}
+
+/* ====================================
+  画像グリッチエエフェクト
+==================================== */
+body {
+  margin: 0;
+}
+
+.parallax-image {
+  background: #000 no-repeat center/cover;
+  background-size: 0;
+  width: 100%;
+  min-height: 700px;
+  /*調整箇所*/
+  position: relative;
+  overflow: hidden;
+}
+
+.parallax-image::before {
+  content: "";
+  background: inherit;
+  background-size: cover;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
