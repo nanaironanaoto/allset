@@ -1,25 +1,25 @@
-/*-------------------------------------
-  パララックスアニメーション
--------------------------------------*/
-window.addEventListener('DOMContentLoaded', function () {
-
-  // 画像自体を移動
-  gsap.fromTo('.parallax-image', { y: 100 }, {
-    y: -100, scrollTrigger: {
-      trigger: '.parallax-sec',
-      start: 'top bottom',
-      end: 'top top',
-      scrub: 1,
+$(function ($) {
+  $(window).on('load resize', function() {
+    //ウィンドウサイズを取得する
+    var w = $(window).width();
+    //ウィンドウサイズが768より大きい場合の処理
+    if( w > 768 ) {
+      console.log('ウィンドウサイズは768より大きいです。');
+      $(window).scroll(function () {
+        var y = $(this).scrollTop();
+        console.log(y);
+        var parallax_obj01_top = -190; //初期位置
+        $('.parallax-content>.parallax-image').css('object-position', '0 ' + parseInt(parallax_obj01_top - y / 30) + 'px');
+      });
+    //ウィンドウサイズが768以下の場合の処理
+    } else {
+      console.log('ウィンドウサイズは768以下です。');
+      $(window).scroll(function () {
+        var y = $(this).scrollTop();
+        console.log(y);
+        var parallax_obj01_top = 10; //初期位置
+        $('.parallax-content>.parallax-image').css('object-position', '0 ' + parseInt(parallax_obj01_top - y / 20) + 'px');
+      });
     }
-  })
-
-  // ぼかしからくっきりと
-  gsap.fromTo('.parallax-image', { filter: 'blur(10px)' }, {
-    filter: 'blur(0px)', scrollTrigger: {
-      trigger: '.parallax-sec',
-      start: 'top bottom',
-      end: 'top center',
-      scrub: 1,
-    }
-  })
-})
+  });   
+});

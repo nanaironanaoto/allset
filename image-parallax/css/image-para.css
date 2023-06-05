@@ -7,16 +7,8 @@
   height: 100vh;
 }
 
-.parallax-wrap {
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-}
-
 /*parallaxの表示エリア*/
 .parallax-content {
-  background: no-repeat center/cover;
-  background-size: 0;
   width: 100%;
   min-height: 440px;
   position: relative;
@@ -25,30 +17,17 @@
   transition: transform 0.8s ease-out;
 }
 
-/* ====================================
-  画像グリッチエエフェクト
-==================================== */
-body {
-  margin: 0;
-}
-
 .parallax-image {
-  background: #000 no-repeat center/cover;
-  background-size: 0;
+  object-fit: cover;
+  object-position: 0 -190px;
   width: 100%;
-  min-height: 700px;
-  /*調整箇所*/
-  position: relative;
-  overflow: hidden;
+  height: 470px;
+  opacity: 1;
+  transition: .3s;
 }
 
-.parallax-image::before {
-  content: "";
-  background: inherit;
-  background-size: cover;
-  bottom: 0;
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
+@media screen and (max-width: 768px) {
+  .parallax-image{
+    height: 200px;
+  }
 }
